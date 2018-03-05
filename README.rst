@@ -265,7 +265,7 @@ Class 10: Power
 
    - Batteries
       + LiPo  >>>DANGER<<<
-        * The Bulge
+         * The Bulge
       + Charging >>>EVEN MORE DANGER<<<
       + Protection Circuits >>>SLIGHTLY LESS DANGER<<<
       + Further reading: Battery University
