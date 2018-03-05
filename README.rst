@@ -80,8 +80,11 @@ Interface and Protocol
    - Clock Scaler
    - In Depth: i2c
    - Interru-
+
       A class room protocol
+
       /proc/interrupts
+
       IRQs
 
 Material:
