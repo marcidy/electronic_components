@@ -1,0 +1,242 @@
+
+Revamp based on feedback.
+
+Blinking an LED from an Arduino takes over 10 hours to explain, even though it's about 4 lines of c code.  Find out why!  We'll go over documentation for electrical components and protocals, and the real goal of this class is self-sufficiency in the world of IC electonics and beyond.  Move beyond the Arduino ecosphere!  Build your own boards, select your own components.  Get weird.  The only shields you need are +2 THAC0/+4 against dark elves.
+
+Series goal:
+Promote self-education with electrical component documentation
+
+This series of classes will use close readings of datasheets and programming manuals to reverse engineer a circuit which blinks an LED using an Arduino Nano and an LED controller.
+
+
+Class 1: First, blinking the LED an easy way
+
+We'll be reading about the LED, LED controller and the Nano board (not the Atmel chip) to send commands down the i2c bus to blink LEDs.  
+
+- Material
+Nano: https://www.arduino.cc/en/uploads/Main/ArduinoNanoManual23.pdf
+LED Controller: http://www.ti.com/lit/ds/symlink/tlc59116.pdf
+https://alchetron.com/Integrated-circuit-packaging#-
+RGB Led:
+
+- Requirements:
+  Voltage how high the cliff is
+  Current is how big the rock is
+  Heat is hot and causes things to melt and burn
+  Water is wet
+  Time is of the essence
+
+- Bonus:
+My Fail :  OSRAM LED DURIS S 5 RED
+
+I'll stick around with my circuit (assuming i didn't blow it up) if people want to try various commands down the i2c bus.
+
+
+Class 2: Communication
+WHAT?
+
+Interface vs. Protocol
+Walkie Talkies
+Clocking
+i2c bus in depth: electrical specification and logical protocol
+Arduino Wire Library
+Interru-
+        8 pins -> {or} ^ interrupts on  -> single interrupt pin.  An interrupt happens!
+
+
+Material:
+http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf - i2c protocol section
+
+
+Class 3: Atmel Components and Registers, Arduino Wire Library
+Holy shit there's a lot of shit in the microcontroller.  I kinda thought it was like one thing?  
+
+
+I don't want Arduino C lang to be a requirement, but basic knowledge of programming is: setting variables, functions, flow control.  I fully intend to go through 'twi.c' and 'Wire.cpp'.  In the previous class, this library was used to communicate to the LED controller.  Why did that work?  Because both sides implement i2c bus protocol.  Breaking down the wire library on the arduino side provides insight into the wire library itself as well as accessing and setting registers on the Atmel.  
+
+Material:
+http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf
+
+twi.c and Wire.cpp from the Arduino wire library.
+https://github.com/arduino/Arduino/tree/master/hardware/arduino/avr/libraries/Wire/src
+
+Bonus: Reverse Polish Notation
+
+
+Class 3.5: Binary Logic Intensive
+The magic of Ada Lovelace and a two state system
+  - A bit?  A bit of WHAT!?
+
+OR/AND/NOR/NAND/XOR
+binary arithmatic
+Ripple carry adder
+ALU
+
+Bad Physics Lesson:
+JFETs
+
+Bonus:
+Watch a decaying mind try to remember FPGAs
+Why is everything in 2 digit Hex anyways
+0xDEADBEEF
+
+
+Class 4:  ATMega328 CPU Core
+What is an Architecture, Core, Perhiphery
+What is overclocking
+RAM organization
+
+Class 5: Coding vs programming
+"And dont get me started on scripting."
+
+Atmel Instruction set and Programming Manual
+https://en.wikipedia.org/wiki/Atmel_AVR_instruction_set
+http://ww1.microchip.com/downloads/en/devicedoc/atmel-0856-avr-instruction-set-manual.pdf
+
+
+
+Class 6: Programming a microcontroller the hard way
+What if we take this thing right here, and put it over there?
+AVRDUDE
+http://www.nongnu.org/avrdude/user-manual/avrdude.html
+fuse bits
+Program memory
+Boot process
+avrdude terminal mode
+ - dump
+ - erase
+ - send:  can you blink the LED from here?
+    where can you get to from here?  
+    Can you read what's in memory?  
+    Write?  
+    What would you write?  
+    A shell small shell program?
+    What now?  how do you go from here to executing the shell?
+        - stack: exit this context into one that you decide
+
+section 31.7.4 of Atmel datasheet
+
+
+Class 7: wtf is 'a' binary?  
+briefly on binary formats, endian
+Examine/diff hex/bin output from AVR dude
+Dumping firmware
+Intro to reverse engineering soft/firmware
+Drivers
+
+
+
+Class 8: Program Compilation
+Raise your hand if you know what the 'Boss Key' is.
+
+preprocessing - adding a bunch of shit
+assembly - putting it together...?
+compilation - uh..putting it MORE together?
+linking - connecting it to stuff.  yeah.
+
+disassembly - Why everything gets cracked
+Structure: Two-way functions vs one-way functions
+
+Progam Execution
+The Stack
+The Stack Pointer
+Saving State on the Stack
+Restoring State
+
+Discussion Bonus:
+The code is in memory
+That code is accessable by the microcontroller
+Assuming you have enough memory, how would you copy the code, and then enter into that code's execution context?
+If you woke up in a dream at a particular point in code execution, and had the ability to load your own code into memory, what would you look at and do first?
+Congradulations, you wrote a virus capable of infecting another atmel.  Given that you know how to program one too, you just need to interface with one.
+
+
+Self Study: Language
+What is a language?  Who is Chompsy?  Why are computer languages, uh, languages?  More importantly, who is SasQ?
+Grammar
+Parsing
+Tokenizing
+Lexing
+Abstract Syntax Tree
+ENBF
+https://stackoverflow.com/questions/2842809/lexers-vs-parsers - SasQ comments are the best
+
+
+Class 9: Logic, Gates, FETs
+2B or not 2B, that is..True. And By the power of GreySkull, I am Captain Planet!
+
+Class 10: Power.  
+Have you tried turning it off and back on again?
+
+Rectifiers/Inverters
+Switching
+Step up/step down/boost/buck
+Fooling mother nature, aka you can't.  Power In <-> Power Out. 
+Heat / Flow / Dissipation
+Batteries
+LiPo >>>DANGER<<<
+LiPo Charging >>>NO SERIOUSLY, DANGER <<<
+LiPo Protection - do you have it?  if not, you need it.  Period.
+Lipo Cells, seriues, etc  - Battery University
+
+Bonus:
+NEVER build a stun gun.  Just because it's easy, cheap, and effective does not mean you should do it.  Especially not in innocuously shaped objects.  Did you know they can run on 9V batteries?  Well, you shouldn't.  Especially with the shape capabilities of LiPo's these days.  
+
+
+
+Further reading:
+https://en.wikichip.org/wiki/amd/microarchitectures/zen
+You should be able to read through this at medium detail and get an idea of what's going on.  It has far more components, but so what?  It's all the same shit, just google it.
+It's al the same shit.  Compilers build binariers which are capable of interpretation on these chips.  Knowing the differences between this beast and the atmel, how is it that an intel chip and an amd chip can run the same .exe file?  
+
+
+
+There's very little chance of getting through all this stuff in an hour.  Either we can schedule a longer session on a sat/sun, or i can roll this forward a class or two.  Obviously the more you read, the more you will get out of class, but i will run the class like it's everyone's first time reading the document.  This is serious business.  Actually it's very dry.  Before you learned things but they were modularized and you could forget them.  Not so much here.  This is where programming happens, where a users desire is translated to electrical signals to query phone contents and display file names on the screen.  But it's also super easy, there's only a handful of operations to do the work. 
+
+Quick History: Von Neumann vs Harvard
+
+11.2 ALU (No longer Civil)
+11.3 Status Register (Not JUST for socialites)
+11.4 General Purpose Register w/ examples (How many bits was this chip again?)
+
+On Wed, Feb 28, 2018 at 5:04 PM, Matt Arcidy <marcidy@gmail.com> wrote:
+> That's a great idea.  I was considering stopping at interrupts so I could
+> touch on, very briefly, what it interaction really is. 
+>
+> optional assembly in between, perhaps
+>
+>
+> On Wed, Feb 28, 2018, 16:59 Bryon Roché <kain@kain.org> wrote:
+>>
+>> Schedule a datasheet class, with a follow-up programming manual class?
+>> There's an intersection there I think many people have trouble parsing.
+>>
+>> On February 28, 2018 3:50:40 PM CST, Matt Arcidy <marcidy@gmail.com>
+>> wrote:
+>>>
+>>> I'm considering giving a class on datasheets.  I think they might be
+>>> somewhat intimidating if not familiar, and anything that helps people move
+>>> towards a wider vocabulary of components seems useful. 
+>>>
+>>> it serves as a pretty good intro to a lot of areas, including packaging,
+>>> engineering style dimensions, dealing with pads, and pcb footprints. People
+>>> would print out copies of 3 component I select, easy medium hard, and we'd
+>>> go over them.
+>>>
+>>> Any thoughts, or advice?  I'm thinking one class hour max, with a decent
+>>> amount of dialog rather than straight lecture.  I would consider it friendly
+>>> to anyone who knows the difference between voltage and current, and useful
+>>> to anyone desiring to go beyond the Arduino ecosphere.
+>>>
+>>>
+>>>
+>>> Thanks!
+>>
+>>
+>> --
+>> Sent from my Android device with K-9 Mail. Please excuse my brevity.
+>> _______________________________________________
+>> Noisebridge-discuss mailing list
+>> Noisebridge-discuss@lists.noisebridge.net
+>> https://lists.noisebridge.net/mailman/listinfo/noisebridge-discuss
+
