@@ -179,9 +179,9 @@ ________
      + dump
      + erase
      + send
-       = Can you blink the LED from here?
-       = Where can you get to from here?
-       = Can you read what's in memory?  Write?
+       * Can you blink the LED from here?
+       * Where can you get to from here?
+       * Can you read what's in memory?  Write?
    - fuse bits, program memory, boot process
 
 
@@ -200,8 +200,8 @@ _______
    - avrdude output from compilation and dump from microcontroller
 
 
-Class 8: Program Compilation
-----------------------------
+Class 8: Program Compilation and Execution
+------------------------------------------
 
    *Anyone ever used the Boss Key?*
 
@@ -259,12 +259,13 @@ Class 10: Power
       + Switching
       + Step-up, step-down, boost, buck
    
-   - Fooling mother nature, aka, you cant.  Power In <-> Power Out
+   - Fooling mother nature, aka, you cant.  
+      + Power In = Power Out *In this house we obey the 2nd law of thermodynamics!*
       + Heat, Flow, Disapation, Cooling
 
    - Batteries
       + LiPo  >>>DANGER<<<
-        = The Bulge
+        * The Bulge
       + Charging >>>EVEN MORE DANGER<<<
       + Protection Circuits >>>SLIGHTLY LESS DANGER<<<
       + Further reading: Battery University
