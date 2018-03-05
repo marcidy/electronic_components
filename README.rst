@@ -1,4 +1,4 @@
-/==============================
+===============================
 Noise-bridge - Pwnning the Nano
 ===============================
 
@@ -161,7 +161,7 @@ ________
 
    - https://en.wikipedia.org/wiki/Atmel_AVR_instruction_set
    - http://ww1.microchip.com/downloads/en/devicedoc/atmel-0856-avr-instruction-set-manual.pdf
-     + This is what we will be using in class
+      + This is what we will be using in class
 
 
 Class 6: Programming a microcontroller the hard way
@@ -227,7 +227,7 @@ ________________
    - If you become aware of your surroundings inside the microcontroller, what would yo do first?
    - could you self replicate and send a copy of yourself somewhere?
    - what about load a small program into memory, jump to that location, and start a small shell open on port 1023?
-     + bonus for why 1023 and not 1025
+      + bonus for why 1023 and not 1025
 
 Self Study: Language
 ____________________
@@ -286,7 +286,7 @@ Discussion: What's next?
 ________________________
 
    - https://en.wikichip.org/wiki/amd/microarchitectures/zen
-     + You should be able to read this and have a good idea of what's going on.
+      + You should be able to read this and have a good idea of what's going on.
    - https://en.wikipedia.org/wiki/Speculative_execution
    - https://github.com/marcan/speculation-bugs
       
