@@ -1,6 +1,6 @@
-===============================
-Noise-bridge - Pwning Arduino
-===============================
+==============
+Pwning Arduino
+==============
 
    		*Quite possibly the most complicated way to blink an LED that does not require vapor deposition*
 
@@ -38,7 +38,7 @@ If you install the IDE, you should find the following:
   	- Where are the libraries on disk, specifically the Wire library?  (twi.c and Wire.cpp)
     twi.c and Wire.cpp can alternatively found here: https://github.com/Arduino/Arduino/tree/master/hardware/arduino/avr/libraries/Wire/src
 
-I will e using the Nano for class, but other Arduinos can substitute when looking at code.  When we hit class 6, it will be beneficial to have ANY Arduino thats is programmable.  Doesn't matter which one.  Maybe there are some sitting around the space.  
+I will be using the Nano for class, but other Arduinos can substitute when looking at code.  When we hit class 6, it will be beneficial to have ANY Arduino thats is programmable.  Doesn't matter which one.  Maybe there are some sitting around the space.  
 
 
 Class 1: Blinking an LED
@@ -171,7 +171,7 @@ Material
 ________
 
    	- AVRDUDE: http://www.nongnu.org/avrdude/user-manual/avrdude.html
-   	- section 31.7.4 for Atmel Datasheet
+   	- section 31.7.4 from Atmel Datasheet
 
    	- avrdude terminal mode
      	+ dump
@@ -186,7 +186,7 @@ ________
 Class 7: wtf is a binary
 ------------------------
 
-   	- Briefly on binary formats, like endian
+   	- Briefly on binary formats, endian, LSB, MSB
    	- hex/bin output from avrdude compilation
    	- dumping and examining firmware aka microcontroller code
    	- Intro to reverse engineering software
@@ -211,7 +211,7 @@ Class 8: Program Compilation and Execution
 
    	- disassembly, *or why everything get cracked all the time forever*
       	+ Two way vs one way functions
-      	+ you know who ELSE used one way functions?  Hitler.
+      	+ you know who ELSE used one way functions?
 
    	- Program Execution
    	- The Stack
@@ -245,7 +245,7 @@ ____________________
 Class 9: FETs, Logic Gates
 ---------------------------
 
-   *2B or not 2B, that is...always going to evaluate to True.*
+   		*2B or not 2B, that is...always going to evaluate to True.*
 
    [Need Materials and class desc]
 
