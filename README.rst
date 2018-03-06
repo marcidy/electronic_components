@@ -17,13 +17,9 @@ Self-sufficiency with electronic components.  Understand component selection bas
 Knowledge
 ---------
 
-	- **Electrical:** 
-
-	A basic knowledge of Voltage and Current is all that is required.  
+	- **Electrical:** A basic knowledge of Voltage and Current is all that is required.  
 	
-   	- **Coding:**  
-   
-Having created, compiled ('verify'), uploaded, and tested any simple program to an Arduino is good background, but I will not be covering anything specific except the Wire library.  Even then, it will be towards a specific end, not to understand the code.  That being said, there are activities which can only be done with a chip. 
+   	- **Coding:**  Having created, compiled ('verify'), uploaded, and tested any simple program to an Arduino is good background, but I will not be covering anything specific except the Wire library.  Even then, it will be towards a specific end, not to understand the code.  That being said, there are activities which can only be done with a chip. 
 
 
 Materials
