@@ -152,6 +152,7 @@ ________
 
 - http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf
 
+
 Class 6: Coding vs Programming
 ------------------------------
 
@@ -200,7 +201,7 @@ Material
 _______
 
 - avrdude output from compilation and dump from microcontroller
-   [ add the above ]
+	+ These can be found in the 'asm' directory
 
 
 Class 9: Program Compilation and Execution
