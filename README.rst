@@ -11,7 +11,7 @@ This series of classes will use close readings of datasheets and programming man
 Goal
 ----
 
-Self-sufficiency with electronic components.  Understand component selection based on electrical, functional, and power requirements, as well as constraints.  Move beyond the Arduino ecosystem: the only shield you need is +2/+4 against dark elves.
+*Self-sufficiency with electronic components.*  Understand component selection based on electrical, functional, and power requirements, as well as constraints.  Move beyond the Arduino ecosystem: the only shield you need is +2/+4 against dark elves.
 
 
 Knowledge
@@ -45,7 +45,7 @@ I will be using the Nano for class, but other Arduinos can substitute when looki
 Class 1: Blinking an LED
 ------------------------
 
-   		*The easy way.*
+	*The easy way.*
 
 We'll be reading the datasheets for an RGB LED, a LED PWM controller, and the Arduino Nano board in depth.  Note we will not go over the ATmega328 controller, saved for a later class.  We'll interact with the hardware by sending instructions from the Arduino to the PWM controller via i2c to blink the LED.
 
@@ -65,17 +65,17 @@ ______________
 Class 2: Communication
 ----------------------
 
-   		*WHAT?!*
+	*WHAT?!*
 
 Interface and Protocol
 ______________________
 
 - Walkie Talkie
 
-		*No you go, no, ok, go ahea- what?  oh, ok, i mean, wait, no no, you- i was gonn-  no reall...*
+	*No you go, no, ok, go ahea- what?  oh, ok, i mean, wait, no no, you- i was gonn-  no reall...*
 		
 - Clocking
-	+ Voltage High
++ Voltage High
     + Voltage Low
     + Rise Time
     + Edges
@@ -95,7 +95,7 @@ ________
 Class 3: ATmega328 Components and Registers, Arduino Wire Library
 -----------------------------------------------------------------
 
-		*I kinda thought a microcontroller was just one thing.*
+	*I kinda thought a microcontroller was just one thing.*
 
 Basic programming knowledge is a strong suggestion: setting variables, defining and calling functions, and flow control.  :code:`twi.c` and :code:`Wire.cpp` will be covered in depth.  This library was used in the first class and discussed in the second class.  Breaking down the protocol and then reading about an implementation provides insight into accessing ATmega328, as well as a template for any other protocol.
 
@@ -111,13 +111,12 @@ _____
 
 - Reverse Polish Notation
 
-
-Class 3.5: Binary Logic: The magic of Ada Lovelace and a two state system
+Class 4: Binary Logic: The magic of Ada Lovelace and a two state system
 -------------------------------------------------------------------------
 
-	   *A bit?  A bit of WHAT?!*
-
-I'm not sure what to do with this class.  It's unrelated to the topic at hand, but very useful to know in general.  An ALU is a component of a microcontroller which is a good microcosm.  Let's talk about it and figure out who's interested and when to do it.
+	*A bit?  A bit of WHAT?!*
+	
+	*2B or not 2B, that is...always going to evaluate to True.*
 
 - AND/OR/NAND/NOR/XOR
 - Binary arithmetic
@@ -128,6 +127,7 @@ Bad Physics Lesson
 __________________
 
 - JFETs
+	+ https://en.wikipedia.org/wiki/JFET
 
 Bonus
 _____
@@ -136,26 +136,26 @@ _____
 - 0xDEADBEEF
 
 
-Class 4: ATMega328 Core
+Class 5: ATMega328 Core
 -----------------------
 
-   		*This is not a joke*
+	*This is not a joke*
 
 - What is Architecture?  Core?  Periphery?
    	- What is overclocking?
    	- Organization of RAM
    
-   This class will cover the ATmega328 in serious detail from a hardware perspective.  Reading dataseets with this rich of deatil should not be intimidating, just incredibly frustrating and boring, so let's get you there.
+This class will cover the ATmega328 in serious detail from a hardware perspective.  Reading dataseets with this rich of deatil should not be intimidating, just incredibly frustrating and boring, so let's get you there.
 
 Material
 ________
 
-   	- http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf
+- http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf
 
-Class 5: Coding vs Programming
+Class 6: Coding vs Programming
 ------------------------------
 
-   		*...and don't get me started on scripting*
+	*...and don't get me started on scripting*
 
 Material
 ________
@@ -166,10 +166,10 @@ ________
 	+ This is what we will be using in class
 
 
-Class 6: Programming a microcontroller the hard way
+Class 7: Programming a microcontroller the hard way
 ___________________________________________________
 
-   		*What if we take this thing here, and put it over there?*
+	*What if we take this thing here, and put it over there?*
 
 Material
 ________
@@ -187,7 +187,7 @@ ________
 - fuse bits, program memory, boot process
 
 
-Class 7: wtf is a binary
+Class 8: wtf is a binary
 ------------------------
 
 - Briefly on binary formats, endian, LSB, MSB
@@ -203,7 +203,7 @@ _______
    [ add the above ]
 
 
-Class 8: Program Compilation and Execution
+Class 9: Program Compilation and Execution
 ------------------------------------------
 
   		*Anyone ever used the Boss Key?*
@@ -225,6 +225,7 @@ Class 8: Program Compilation and Execution
 
 Discussion Bonus
 ________________
+
 - Code is in memory
 - The microcontroller can access that memory, aka read and (over-)write the code itself while it is excuting.
 - If you become aware of your surroundings inside the microcontroller at a pause in execution, what would you do first?
@@ -245,13 +246,6 @@ ____________________
 
 	https://stackoverflow.com/questions/2842809/lexers-vs-parsers - SasQ comments are the best
 
-
-Class 9: FETs, Logic Gates
----------------------------
-
-   		*2B or not 2B, that is...always going to evaluate to True.*
-
-   [Need Materials and class desc]
 
 Class 10: Power
 ---------------
