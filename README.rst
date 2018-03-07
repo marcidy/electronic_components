@@ -2,10 +2,10 @@
 Pwning Arduino
 ==============
 
-   		*Quite possibly the most complicated way to blink an LED that does not require vapor deposition*
+	*Quite possibly the most complicated way to blink an LED that does not require vapor deposition*
 
 
-This series of classes will use close readings of datasheets and programming manuals to reverse engineer a circuit which blinks an LED using an Arduino Nano and an LED controller.  First, we program an Arduino Nano to use the i2c bus to communicate with the LED driver to blink an LED.  Once understanding inter-chip communication, the ATmega328 microcontroller is explored in depth and we learn to interface with it directly over USB, skipping programming altogether!  Next, we'll look at the firmware (e.g. compiled code) directly and figure out how to reverse engineer it, learning about binary files, assembly, and compilation along the way.  The series will close out with transistors, and a discussion of power.
+This series of classes will use close readings of datasheets and programming manuals to reverse engineer a circuit which blinks an LED using an Arduino Nano and an LED controller.  First, we program an Arduino Nano to use the i2c bus to communicate with the LED driver to blink an LED.  Once understanding inter-chip communication, the ATmega328 microcontroller is explored in depth and we learn to interface with it directly over USB, skipping programming altogether!  Next, we'll look at the firmware (e.g. compiled code) directly and figure out how to reverse engineer it, learning about binary files, assembly, and compilation along the way.  The series will close out with a discussion of power.
 
 
 Goal
@@ -97,7 +97,7 @@ Class 3: ATmega328 Components and Registers, Arduino Wire Library
 
 	*I kinda thought a microcontroller was just one thing.*
 
-Basic programming knowledge is a strong suggestion: setting variables, defining and calling functions, and flow control.  :code:`twi.c` and :code:`Wire.cpp` will be covered in depth.  This library was used in the first class and discussed in the second class.  Breaking down the protocol and then reading about an implementation provides insight into accessing ATmega328, as well as a template for any other protocol.
+Basic programming knowledge is a strong suggestion: setting variables, defining and calling functions, and flow control.  :code:`twi.c` and :code:`Wire.cpp` will be covered in depth.  This library was used in the first class and discussed in the second class.  Breaking down the protocol and then reading about an implementation provides insight into all protocols, especially those used to program the Arduino.
 
 Material
 ________
