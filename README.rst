@@ -33,10 +33,11 @@ Having access to a machine that can run the Arduino IDE, especially in class, is
 
 If you install the IDE, you should find the following:
 
-	- avr-* commands
-  	- Where does your ide put the binary files created after pressing "verify"?
-  	- Where are the libraries on disk, specifically the Wire library?  (twi.c and Wire.cpp)
-    twi.c and Wire.cpp can alternatively found here: https://github.com/Arduino/Arduino/tree/master/hardware/arduino/avr/libraries/Wire/src
+- avr-* commands
+- Where does your ide put the binary files created after pressing "verify"?
+- Where are the libraries on disk, specifically the Wire library?  (twi.c and Wire.cpp)
+
+twi.c and Wire.cpp can alternatively found here: https://github.com/Arduino/Arduino/tree/master/hardware/arduino/avr/libraries/Wire/src
 
 I will be using the Nano for class, but other Arduinos can substitute when looking at code.  When we hit class 6, it will be beneficial to have ANY Arduino thats is programmable.  Doesn't matter which one.  Maybe there are some sitting around the space.  
 
@@ -51,14 +52,14 @@ We'll be reading the datasheets for an RGB LED, a LED PWM controller, and the Ar
 Datasheets
 __________
 
-   	- RGB LED: https://www.Arduino.cc/documents/datasheets/LEDRGB-L-154A4SURK.pdf 
-   	- LED Controller: http://www.ti.com/lit/ds/symlink/tlc59116.pdf
-   	- Arduino Nano: https://www.Arduino.cc/en/uploads/Main/ArduinoNanoManual23.pdf
+- RGB LED: https://www.Arduino.cc/documents/datasheets/LEDRGB-L-154A4SURK.pdf 
+- LED Controller: http://www.ti.com/lit/ds/symlink/tlc59116.pdf
+- Arduino Nano: https://www.Arduino.cc/en/uploads/Main/ArduinoNanoManual23.pdf
 
 Other Material
 ______________
 
-   	- https://en.wikipedia.org/wiki/List_of_integrated_circuit_packaging_types
+- https://en.wikipedia.org/wiki/List_of_integrated_circuit_packaging_types
 
 
 Class 2: Communication
@@ -69,75 +70,78 @@ Class 2: Communication
 Interface and Protocol
 ______________________
 
-	- Walkie Talkie
-      *No you go, no, ok, go ahea- what?  oh, ok, i mean, wait, no no, you- i was gonn-  no reall...*
-   	- Clocking
-      	+ Voltage High
-      	+ Voltage Low
-      	+ Rise Time
-      	+ Edges
-   	- Binary Counter
-   	- Clock Scaler
-   	- In Depth: i2c
-   	- Interru-
-      	+ A class room protocol
+- Walkie Talkie
+
+		*No you go, no, ok, go ahea- what?  oh, ok, i mean, wait, no no, you- i was gonn-  no reall...*
+		
+- Clocking
+	+ Voltage High
+    + Voltage Low
+    + Rise Time
+    + Edges
+- Binary Counter
+- Clock Scaler
+- In Depth: i2c
+- Interru-
+	+ A class room protocol
 
 Material
 ________
 
-   	- http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf
-    	+ **Section 26 only**
+- http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf
+	+ **Section 26 only**
 
 
 Class 3: ATmega328 Components and Registers, Arduino Wire Library
 -----------------------------------------------------------------
-   *I kinda thought a microcontroller was just one thing.*
+
+		*I kinda thought a microcontroller was just one thing.*
 
 Basic programming knowledge is a strong suggestion: setting variables, defining and calling functions, and flow control.  :code:`twi.c` and :code:`Wire.cpp` will be covered in depth.  This library was used in the first class and discussed in the second class.  Breaking down the protocol and then reading about an implementation provides insight into accessing ATmega328, as well as a template for any other protocol.
 
 Material
 ________
 
-   	- http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf
-   	- https://github.com/Arduino/Arduino/tree/master/hardware/arduino/avr/libraries/Wire/src
-     	+ twi.c and Wire.cpp only
+- http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf
+- https://github.com/Arduino/Arduino/tree/master/hardware/arduino/avr/libraries/Wire/src
+	+ twi.c and Wire.cpp only
    
 Bonus
 _____
 
-   	- Reverse Polish Notation
+- Reverse Polish Notation
 
 
 Class 3.5: Binary Logic: The magic of Ada Lovelace and a two state system
 -------------------------------------------------------------------------
 
-   *A bit?  A bit of WHAT?!*
+	   *A bit?  A bit of WHAT?!*
 
 I'm not sure what to do with this class.  It's unrelated to the topic at hand, but very useful to know in general.  An ALU is a component of a microcontroller which is a good microcosm.  Let's talk about it and figure out who's interested and when to do it.
 
-   	- AND/OR/NAND/NOR/XOR
-   	- Binary arithmetic
-   	- Ripple carry adder
-   	- ALU
+- AND/OR/NAND/NOR/XOR
+- Binary arithmetic
+- Ripple carry adder
+- ALU
 
 Bad Physics Lesson
 __________________
 
-   	- JFETs
+- JFETs
 
 Bonus
 _____
-   	- Listen to a decaying mind try to remember FPGAs
-   	- Why is everything in 2 digit hex, e.g. 0xAD
-   	- 0xDEADBEEF
+- Listen to a decaying mind try to remember FPGAs
+- Why is everything in 2 digit hex, e.g. 0xAD
+- 0xDEADBEEF
 
 
 Class 4: ATMega328 Core
 -----------------------
 
-   *This is not a joke*
+   		*This is not a joke*
 
-   	- What is Architecture?  Core?  Periphery?
+- What is Architecture?  Core?  Periphery?
    	- What is overclocking?
    	- Organization of RAM
    
@@ -156,10 +160,10 @@ Class 5: Coding vs Programming
 Material
 ________
 
-   	- https://en.wikipedia.org/wiki/Atmel_AVR_instruction_set
-   		+ A good "more than an" overview, perhaps read before class
-   	- http://ww1.microchip.com/downloads/en/devicedoc/atmel-0856-avr-instruction-set-manual.pdf
-   		+ This is what we will be using in class
+- https://en.wikipedia.org/wiki/Atmel_AVR_instruction_set
+	+ A good "more than an" overview, perhaps read before class
+- http://ww1.microchip.com/downloads/en/devicedoc/atmel-0856-avr-instruction-set-manual.pdf
+	+ This is what we will be using in class
 
 
 Class 6: Programming a microcontroller the hard way
@@ -170,32 +174,32 @@ ___________________________________________________
 Material
 ________
 
-   	- AVRDUDE: http://www.nongnu.org/avrdude/user-manual/avrdude.html
-   	- section 31.7.4 from Atmel Datasheet
+- AVRDUDE: http://www.nongnu.org/avrdude/user-manual/avrdude.html
+- section 31.7.4 from Atmel Datasheet
 
-   	- avrdude terminal mode
-     	+ dump
-     	+ erase
-     	+ send
-       		* Can you blink the LED from here?
-       		* Where can you get to from here?
-       		* Can you read what's in memory?  Write?
-   	- fuse bits, program memory, boot process
+- avrdude terminal mode
+	+ dump
+	+ erase
+	+ send
+		* Can you blink the LED from here?
+		* Where can you get to from here?
+		* Can you read what's in memory?  Write?
+- fuse bits, program memory, boot process
 
 
 Class 7: wtf is a binary
 ------------------------
 
-   	- Briefly on binary formats, endian, LSB, MSB
-   	- hex/bin output from avrdude compilation
-   	- dumping and examining firmware aka microcontroller code
-   	- Intro to reverse engineering software
-   	- Drivers
+- Briefly on binary formats, endian, LSB, MSB
+- hex/bin output from avrdude compilation
+- dumping and examining firmware aka microcontroller code
+- Intro to reverse engineering software
+- Drivers
 
 Material
 _______
 
-   - avrdude output from compilation and dump from microcontroller
+- avrdude output from compilation and dump from microcontroller
    [ add the above ]
 
 
@@ -204,40 +208,40 @@ Class 8: Program Compilation and Execution
 
   		*Anyone ever used the Boss Key?*
 
-   	- preprocessing: *adding a bunch of stuff*
-   	- assembly: *uh, putting it together?*
-   	- compilation:  *err...putting it MORE together?*
-   	- linking: *putting it together with even MORE stuff?  ug.*
+- preprocessing: *adding a bunch of stuff*
+- assembly: *uh, putting it together?*
+- compilation:  *err...putting it MORE together?*
+- linking: *putting it together with even MORE stuff?  ug.*
 
-   	- disassembly, *or why everything get cracked all the time forever*
-      	+ Two way vs one way functions
-      	+ you know who ELSE used one way functions?
+- disassembly, *or why everything get cracked all the time forever*
+	+ Two way vs one way functions
+	+ you know who ELSE used one way functions?
 
-   	- Program Execution
-   	- The Stack
-   	- The Stack Pointer
-   	- Saving State on the Stack
-   	- Restoring State
+- Program Execution
+- The Stack
+- The Stack Pointer
+- Saving State on the Stack
+- Restoring State
 
 Discussion Bonus
 ________________
-	- Code is in memory
-	- The microcontroller can access that memory, aka read and (over-)write the code itself while it is excuting.
-   	- If you become aware of your surroundings inside the microcontroller at a pause in execution, what would you do first?
-   	- Could you self replicate and send a copy of yourself somewhere?
-   	- what about load a small program into memory? Jump to that location? Start a small shell open on port 1023?
-   		+ bonus for why 1023 and not 1025
+- Code is in memory
+- The microcontroller can access that memory, aka read and (over-)write the code itself while it is excuting.
+- If you become aware of your surroundings inside the microcontroller at a pause in execution, what would you do first?
+- Could you self replicate and send a copy of yourself somewhere?
+- what about load a small program into memory? Jump to that location? Start a small shell open on port 1023?
+	+ bonus for why 1023 and not 1025
 
 Self Study: Language
 ____________________
 
-	- What is a language?  Who is Chompsky?  Why are computer languages, uh, languages?  More importantly, who is SasQ?
-	- Grammar
-	- Parsing
-	- Tokenizing
-	- Lexing
-	- Abstract Syntax Tree
-	- ENBF
+- What is a language?  Who is Chompsky?  Why are computer languages, uh, languages?  More importantly, who is SasQ?
+- Grammar
+- Parsing
+- Tokenizing
+- Lexing
+- Abstract Syntax Tree
+- ENBF
 
 	https://stackoverflow.com/questions/2842809/lexers-vs-parsers - SasQ comments are the best
 
@@ -254,39 +258,39 @@ Class 10: Power
 
    		*Have you tried turning if off and turning it back on again?*
 
-	- Supply
-      	+ Rectifiers/Inverters
-      	+ Switching
-      	+ Step-up, step-down, boost, buck
+- Supply
+	+ Rectifiers/Inverters
+	+ Switching
+	+ Step-up, step-down, boost, buck
    
-   	- Fooling mother nature, aka, you cant.  
-      	+ Power In = Power Out *In this house we obey the 2nd law of thermodynamics!*
-      	+ Heat, Flow, Dissipation, Cooling
+- Fooling mother nature, aka, you cant.  
+	+ Power In = Power Out *In this house we obey the 2nd law of thermodynamics!*
+	+ Heat, Flow, Dissipation, Cooling
 
-   	- Batteries
-      	+ LiPo  >>>DANGER<<<
-         	* The Bulge
-      	+ Charging >>>EVEN MORE DANGER<<<
-      	+ Protection Circuits >>>SLIGHTLY LESS DANGER<<<
-      	+ Further reading: Battery University
+- Batteries
+	+ LiPo  >>>DANGER<<<
+		* The Bulge
+	+ Charging >>>EVEN MORE DANGER<<<
+	+ Protection Circuits >>>SLIGHTLY LESS DANGER<<<
+	+ Further reading: Battery University
 
    [Datasheets]
 
 Bonus
 _____
 
-	- Do NOT build energy weapons, like a stun gun.  
-   	- Just because it's easy and cheap does not mean you should do it, it's illegal.  
-   	- And if you're going to, don't put it in innocuously shaped object easy to conceal.  
-   	- They can run on as little as 9V, so don't google it and find the exact circuit you need pretty easily.  
-   	- Just don't do it with LiPos(SERIOUSLY).  Or ever.
+- Do NOT build energy weapons, like a stun gun.  
+- Just because it's easy and cheap does not mean you should do it, it's illegal.  
+- And if you're going to, don't put it in innocuously shaped object easy to conceal.  
+- They can run on as little as 9V, so don't google it and find the exact circuit you need pretty easily.  
+- Just don't do it with LiPos(SERIOUSLY).  Or ever.
 
 
 Discussion: What's next?
 ________________________
 
-   	- https://en.wikichip.org/wiki/amd/microarchitectures/zen
-      	+ You should be able to read this and have a good idea of what's going on.
-   	- https://en.wikipedia.org/wiki/Speculative_execution
-   	- https://github.com/marcan/speculation-bugs
+- https://en.wikichip.org/wiki/amd/microarchitectures/zen
+	+ You should be able to read this and have a good idea of what's going on.
+- https://en.wikipedia.org/wiki/Speculative_execution
+- https://github.com/marcan/speculation-bugs
       
