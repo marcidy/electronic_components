@@ -54,6 +54,7 @@ __________
 
 - RGB LED: https://www.Arduino.cc/documents/datasheets/LEDRGB-L-154A4SURK.pdf 
 - LED Controller: http://www.ti.com/lit/ds/symlink/tlc59116.pdf
+- FTDI-USB: http://www.ftdichip.com/Documents/DataSheets/ICs/DS_FT232R.pdf
 - Arduino Nano: https://www.Arduino.cc/en/uploads/Main/ArduinoNanoManual23.pdf
 
 Other Material
