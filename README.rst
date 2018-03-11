@@ -2,7 +2,7 @@
 Pwning Arduino
 ==============
 
->>	*Quite possibly the most complicated way to blink an LED that does not require vapor deposition*
+>	*Quite possibly the most complicated way to blink an LED that does not require vapor deposition*
 
 
 This series of classes will use close readings of datasheets and programming manuals to reverse engineer a circuit which blinks an LED using an Arduino Nano and an LED controller.  First, we program an Arduino Nano to use the i2c bus to communicate with the LED driver to blink an LED.  Once understanding inter-chip communication, the ATmega328 microcontroller is explored in depth and we learn to interface with it directly over USB, skipping a programmer altogether!  Next, we'll look at the firmware (e.g. compiled code) directly and figure out how to reverse engineer it, learning about binary files, assembly, and compilation along the way.  The series will close out with a discussion of power.
@@ -45,7 +45,7 @@ I will be using the Nano for class, but other Arduinos can substitute when looki
 Class 1: Blinking an LED
 ------------------------
 
->>	*The easy way.*
+>	*The easy way.*
 
 We'll be reading the datasheets for an RGB LED, a LED PWM controller, and the Arduino Nano board in depth.  Note we will not go over the ATmega328 controller, saved for a later class.  We'll interact with the hardware by sending instructions from the Arduino to the PWM controller via i2c to blink the LED.
 
@@ -66,7 +66,7 @@ ______________
 Class 2: Communication
 ----------------------
 
->>	*WHAT?!*
+>	*WHAT?!*
 
 Interface and Protocol
 ______________________
@@ -96,7 +96,7 @@ ________
 Class 3: ATmega328 Components and Registers, Arduino Wire Library
 -----------------------------------------------------------------
 
->>	*I kinda thought a microcontroller was just one thing.*
+>	*I kinda thought a microcontroller was just one thing.*
 
 Basic programming knowledge is a strong suggestion: setting variables, defining and calling functions, and flow control.  :code:`twi.c` and :code:`Wire.cpp` will be covered in depth.  This library was used in the first class and discussed in the second class.  Breaking down the protocol and then reading about an implementation provides insight into all protocols, especially those used to program the Arduino.
 
@@ -115,9 +115,9 @@ _____
 Class 4: Binary Logic: The magic of Ada Lovelace and a two state system
 -------------------------------------------------------------------------
 
->>	*A bit?  A bit of WHAT?!*
+>	*A bit?  A bit of WHAT?!*
 	
->>	*2B or not 2B, that is...always going to evaluate to True.*
+>	*2B or not 2B, that is...always going to evaluate to True.*
 
 - AND/OR/NAND/NOR/XOR
 - Binary arithmetic
@@ -140,7 +140,7 @@ _____
 Class 5: ATMega328 Core
 -----------------------
 
->>	*This is not a joke*
+>	*This is not a joke*
 
 - What is Architecture?  Core?  Periphery?
    	- What is overclocking?
@@ -157,7 +157,7 @@ ________
 Class 6: Coding vs Programming
 ------------------------------
 
->>	*...and don't get me started on scripting*
+>	*...and don't get me started on scripting*
 
 Material
 ________
@@ -171,7 +171,7 @@ ________
 Class 7: Programming a microcontroller the hard way
 ---------------------------------------------------
 
->>	*What if we take this thing here, and put it over there?*
+>	*What if we take this thing here, and put it over there?*
 
 Material
 ________
@@ -212,7 +212,7 @@ _______
 Class 9: Program Compilation and Execution
 ------------------------------------------
 
->>	*Anyone ever used the Boss Key?*
+>	*Anyone ever used the Boss Key?*
 
 - preprocessing: *adding a bunch of stuff*
 - assembly: *uh, putting it together?*
@@ -256,7 +256,7 @@ ____________________
 Class 10: Power
 ---------------
 
->>	*Have you tried turning if off and turning it back on again?*
+>	*Have you tried turning if off and turning it back on again?*
 
 - Supply
    + Rectifiers/Inverters
