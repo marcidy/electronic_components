@@ -5,7 +5,7 @@ Pwning Arduino
 	*Quite possibly the most complicated way to blink an LED that does not require vapor deposition*
 
 
-This series of classes will use close readings of datasheets and programming manuals to reverse engineer a circuit which blinks an LED using an Arduino Nano and an LED controller.  First, we program an Arduino Nano to use the i2c bus to communicate with the LED driver to blink an LED.  Once understanding inter-chip communication, the ATmega328 microcontroller is explored in depth and we learn to interface with it directly over USB, skipping programming altogether!  Next, we'll look at the firmware (e.g. compiled code) directly and figure out how to reverse engineer it, learning about binary files, assembly, and compilation along the way.  The series will close out with a discussion of power.
+This series of classes will use close readings of datasheets and programming manuals to reverse engineer a circuit which blinks an LED using an Arduino Nano and an LED controller.  First, we program an Arduino Nano to use the i2c bus to communicate with the LED driver to blink an LED.  Once understanding inter-chip communication, the ATmega328 microcontroller is explored in depth and we learn to interface with it directly over USB, skipping a programmer altogether!  Next, we'll look at the firmware (e.g. compiled code) directly and figure out how to reverse engineer it, learning about binary files, assembly, and compilation along the way.  The series will close out with a discussion of power.
 
 
 Goal
@@ -169,7 +169,7 @@ ________
 
 
 Class 7: Programming a microcontroller the hard way
-___________________________________________________
+---------------------------------------------------
 
 	*What if we take this thing here, and put it over there?*
 
@@ -183,10 +183,14 @@ ________
 	+ dump
 	+ erase
 	+ send
-		* Can you blink the LED from here?
 		* Where can you get to from here?
-		* Can you read what's in memory?  Write?
+        * Can you set registers?
+		* Can you read what's in code memory?  Write?
+		* Can you blink the LED from here?
 - fuse bits, program memory, boot process
+
+Bonus:
+Programming registers and outputs using binary
 
 
 Class 8: wtf is a binary
@@ -255,21 +259,34 @@ Class 10: Power
    		*Have you tried turning if off and turning it back on again?*
 
 - Supply
-	+ Rectifiers/Inverters
-	+ Switching
-	+ Step-up, step-down, boost, buck
+   + Rectifiers/Inverters
+   + Switching
+   + Step-up, step-down, boost, buck
    
 - Fooling mother nature, aka, you cant.  
 	+ Power In = Power Out *In this house we obey the 2nd law of thermodynamics!*
 	+ Heat, Flow, Dissipation, Cooling
 
 - Batteries
-	+ LiPo  >>>DANGER<<<
-		* The Bulge
-	+ Charging >>>EVEN MORE DANGER<<<
-	+ Protection Circuits >>>SLIGHTLY LESS DANGER<<<
-	+ Further reading: Battery University
+   + Primary / Secondary 
+   + LiPo  >>>DANGER<<<
+      * The Bulge
+   + Charging >>>EVEN MORE DANGER<<<
+   + Protection Circuits >>>SLIGHTLY LESS DANGER<<<
+   + Further reading: Battery University
 
+- Buttons
+   + Debouncing
+
+
+Material
+________
+
+- https://www.recom-power.com/pdf/Powerline-AC-DC/RAC03-SC.pdf
+- https://www.cui.com/product/resource/vof-10b.pdf
+- http://www.ti.com/lit/ds/symlink/lmz21701.pdf
+- http://www.ti.com/lit/ds/symlink/mc33063a.pdf
+- http://www.mccsemi.com/up_pdf/MB05S-MB10S(MBS-1).pdf
    [Datasheets]
 
 Bonus
