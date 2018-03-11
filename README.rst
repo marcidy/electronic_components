@@ -39,7 +39,7 @@ If you install the IDE, you should find the following:
 
 twi.c and Wire.cpp can alternatively found here: https://github.com/Arduino/Arduino/tree/master/hardware/arduino/avr/libraries/Wire/src
 
-I will be using the Nano for class, but other Arduinos can substitute when looking at code.  When we hit class 6, it will be beneficial to have ANY Arduino thats is programmable.  Doesn't matter which one.  Maybe there are some sitting around the space.  
+I will be using the Nano for class, but other Arduinos can substitute when looking at code.  When we hit class 6, it will be beneficial to have ANY Arduino that's is programmable.  Doesn't matter which one.  Maybe there are some sitting around the space.  
 
 
 Class 1: Blinking an LED
@@ -73,7 +73,7 @@ ______________________
 
 - Walkie Talkie
 
->	*No you go, no, ok, go ahea- what?  oh, ok, i mean, wait, no no, you- i was gonn-  no reall...*
+   >	*No you go, no, ok, go ahea- what?  oh, ok, i mean, wait, no no, you- i was gonn-  no reall...*
 		
 - Clocking
 + Voltage High
@@ -146,7 +146,7 @@ Class 5: ATMega328 Core
    	- What is overclocking?
    	- Organization of RAM
    
-This class will cover the ATmega328 in serious detail from a hardware perspective.  Reading dataseets with this rich of deatil should not be intimidating, just incredibly frustrating and boring, so let's get you there.
+This class will cover the ATmega328 in serious detail from a hardware perspective.  Reading datasheets with this rich of detail should not be intimidating, just incredibly frustrating and boring, so let's get you there.
 
 Material
 ________
@@ -233,7 +233,7 @@ Discussion Bonus
 ________________
 
 - Code is in memory
-- The microcontroller can access that memory, aka read and (over-)write the code itself while it is excuting.
+- The microcontroller can access that memory, aka read and (over-)write the code itself while it is executing.
 - If you become aware of your surroundings inside the microcontroller at a pause in execution, what would you do first?
 - Could you self replicate and send a copy of yourself somewhere?
 - what about load a small program into memory? Jump to that location? Start a small shell open on port 1023?
