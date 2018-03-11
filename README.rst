@@ -270,7 +270,7 @@ Class 10: Power
 - Batteries
    + Primary / Secondary 
    + Lithium (coin)
-      + Li+ / Li-Po / Li-Ion **>>>DANGER<<<**
+   + Li+ / Li-Po / Li-Ion **>>>DANGER<<<**
       * The Bulge
    + Charging **>>>EVEN MORE DANGER<<<**
    + Protection Circuits (CPB/CPM) **>>>SLIGHTLY LESS DANGER<<<**
