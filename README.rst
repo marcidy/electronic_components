@@ -269,11 +269,12 @@ Class 10: Power
 
 - Batteries
    + Primary / Secondary 
-   + LiPo  >>>DANGER<<<
+   + Lithium (coin)
+      + Li+ / Li-Po / Li-Ion **>>>DANGER<<<**
       * The Bulge
-   + Charging >>>EVEN MORE DANGER<<<
-   + Protection Circuits >>>SLIGHTLY LESS DANGER<<<
-   + Further reading: Battery University
+   + Charging **>>>EVEN MORE DANGER<<<**
+   + Protection Circuits (CPB/CPM) **>>>SLIGHTLY LESS DANGER<<<**
+   + Just go here and read: **batteryuniversity.com**
 
 - Buttons
    + Debouncing
@@ -287,7 +288,14 @@ ________
 - http://www.ti.com/lit/ds/symlink/lmz21701.pdf
 - http://www.ti.com/lit/ds/symlink/mc33063a.pdf
 - http://www.mccsemi.com/up_pdf/MB05S-MB10S(MBS-1).pdf
-   [Datasheets]
+- https://cdn-shop.adafruit.com/product-files/1317/C1515_-_Li-Polymer_402025_150mAh_3.7V_with_PCM.pdf
+
+
+Further Reading
+_______________
+
+- https://www.androidauthority.com/lithium-ion-vs-lithium-polymer-whats-the-difference-27608/
+
 
 Bonus
 _____
