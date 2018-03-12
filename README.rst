@@ -189,9 +189,16 @@ ________
 		* Can you blink the LED from here?
 - fuse bits, program memory, boot process
 
-Bonus:
-Programming registers and outputs using binary
+Bonus
+_____
 
+- Programming registers and outputs using binary
+
+Self Study
+__________
+
+- Assemply:
+   + https://sites.google.com/site/avrasmintro/
 
 Class 8: Binary
 ---------------
