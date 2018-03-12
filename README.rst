@@ -203,6 +203,7 @@ __________
 Class 8: Binary
 ---------------
 >  *'Why do they keep calling it _a_ binary? It IS binary.'  - Me, at my first job*
+
 - Briefly on binary formats, endian, LSB, MSB
 - hex/bin output from avrdude compilation
 - dumping and examining firmware aka microcontroller code
