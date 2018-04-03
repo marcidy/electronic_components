@@ -422,11 +422,200 @@ LED Driver - TLV59116F
    - Configuratoin is **stored** meaning the MCU can disconnect and go to something else
    - new interesting features are communicatoin and configurability, we will focus on those rather than other characateristics unless questions.
 
-0. Front Page
+1. Front Page
 
-   a. Way more features
-      
-      i. Behavior
-         
-         Constant Current
+   a. Constant Current (Remember this?)
 
+   b. 256-step group brightness (why 256?)
+
+   c. What a duty cycle?
+
+   d. Why need address pins?
+
+   e. External resistor sets output currect
+
+      i. Here's an explanation of some **glue**
+
+2. Applications
+
+   a. Gaming (wut), Small signage, Sinage
+
+   b. Basically anything that needs a few LEDs to blink and stuff
+
+3. Description
+
+   a. Says RGBA LEDs, we'll see why shortly
+
+7. Skiiiiiip to 7.6 Timing requirements [skkjip this for lesson 2]
+
+   a. First look at information related to a protocol
+
+      i. What's a protocol, and how is it different from an interface?
+
+   b. (go through page, need definitions for below)
+
+   c. Typical Charateristics briefly
+
+8. Here we go, Parameter measurement
+
+   a. What's a clock signal
+
+      i. Why are clocks necessaray, what are they doing?  (synchronising logic signals)
+
+   b. How does i2c work exactly?  Assumed that you know otherwise you wouldn't be buying i2c chip.  Google!
+   
+      i. It's not really outlined here, but SCL is the clock signals AND the indication that communication is about to start by going low
+
+      ii. Reset Timing
+
+      iii. Protocol
+
+         - Start condition
+
+         - A1 MSB (what?)
+
+         - A6-...?
+
+         - D?...D0?
+
+         - A?
+
+         - P?
+
+      iv. Definition of Timing
+
+         - Thought this was just a square wave, what's all thing then
+
+         - Why are the lines diagonal? (tr, tf)
+
+         - HD;STA, SU;DAT, tHD;DAT, TVD;DAT, tVD;ACK, TSU;STO
+
+            + HD - Hold
+
+            + SU - Setup time 
+
+            + VD - Valid
+
+      v. Two wire   
+
+         - Requires all this info to work, why?
+
+            * how knows when to start?  
+ 
+            * how knows which chip?  
+ 
+            * What is data for chip?  
+ 
+            * That it received data? 
+ 
+            * When to stop?
+
+9. Function Block diagram
+
+   a. Note registers, have not not seen these yet
+
+      i. what are they?  what are they for?
+
+      ii. do a little diagram - address: data
+
+   b. Individual brightness control
+
+      i. 97kHz signal with 256 steps + comple other signals
+
+      ii. 97kHz is how quickly a blink would happen, or how quickly a LED can cycle through a brightness
+
+      iii.  Others are similar, letting you control whole group (not defined yet) of LEDs
+
+   c. Register Maps
+
+      i. ok so what does this mean exactly?  
+
+      ii. Datasheets are usually ordered by detail, with lease detail first.  This is just an overview of what will come next
+
+   d. Mode register
+
+      i. What is it's address? and what does that mean?
+
+      ii. Skip for now, most complicated.  Leave all defauls (what's the binary and hex value for all defaults?)
+
+   e. Mode2
+
+      i. bit 5, bit 3
+
+      ii. What are the default values?
+
+      iii. What do I write to this register to set group blinking and outputs change ok ACK?
+
+   f. Brightness Control registers
+
+      i. Whats all this aboot?
+
+   g. Group duty cycle
+
+   h. group frequency
+
+   i. LED driver output state
+
+      i. What does this mean?  What do i write to it to turn specific LED's on?  controled by PWM?
+
+   j. Output Gain Control
+
+      i. That resistor, how does it work?
+
+10. Application Implementation
+
+    a. Setting address
+
+    b. i2c Bit Transfer
+
+    c. Start and Stop conditions
+
+    d. Acknowledge
+
+    e. Different patterns of setings bits
+
+    f. can read registers
+
+    g. system config (multiple slaves/masters
+
+11. Layout
+
+    a. Which way are the LED's going?  When are they on vs. off?
+
+12. End notes
+
+    a. go through rather quick, thermal pad
+
+
+^^^^^^^^^^^^
+Arduino Nano
+^^^^^^^^^^^^
+
+* What is the Nano exactly?
+   - It's the coombination of all those things and a circuit board.  It's not a single component, but the sum of all the components.
+
+1. Not much going on at all!!
+
+   a. BOM
+
+   b. neat!
+
+2. Let's mess with the LEDs instead.
+
+   a. All on
+
+   b. Turn off
+
+   c. One for 1/2 s, then off
+
+      i. in arduino code
+
+      ii. using registers on TLC
+
+   d. PWM only, half brightness
+
+   e. Blinking only
+
+   f. grp frequency
+
+   
