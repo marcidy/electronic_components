@@ -1,0 +1,318 @@
+========================
+Class 1: Blinking an LED
+========================
+
+**Meta**
+
+* set timers for 30m
+
+**Noisebridge**
+
+*Anti-harassment*
+
+- gender
+- gender identity and expression
+- sexual orientation
+- disability
+- physical appearance
+- body size 
+- race, religion
+- housing status 
+- language
+
+You can be expelled from the space for breaching any rules, and likewise, if anyone is making you feel uncomfortable, please ask them to leave, or ask for help asking them to leave.  If you are asked to leave the space, do so immediately, pack up your belongings and go without pressing a case.  There are other opportunities for mediation, please see the website for more details
+
+*Donations*
+
+If you find this class useful or this space useful, please donate.  You may be aware NB is facing ahousing crisis, all donations help.  Please consider making a recurring donation on the Patreon page, or jjust toss some cash in the bins around the space.  There's a bug one on the refridgerator.
+
+If you dont find this class useful, consider donating anyways.  Maybe they'll find a better instructor.
+
+---------------------
+Welcome to Datasheets
+---------------------
+
+- Who has read a datasheet before?
+- Who was programmed an arduino before?
+- Anyone totally new to electronics?
+
+This class is not about anything **specific** beyond reading datasheets, however, we will be going over specific **components** in order to understand datasheets better.  In this vein, the classes are split into varoius topics, available on the github.  
+
+**Note**
+
+* rearrainge class, bring power frward and final 4 classes will be the ATmega specoific stuff
+
+**Datasheets**
+
+- Give us the information to use the product.
+- think of it more as marketing material:  If you can't use the product, why would you buy it?  Aimed at engineers, but the company wants people to buy them.
+
+**Rough Section List**
+
+- Electrical characteristics
+- Power ratings
+- Thermal metrics
+- Mechanics specifications
+- Packaging
+- Sample aplications
+- Protocols
+
+**Questions?**
+
+_______
+Circuit
+_______
+
+- Functional Components
+   * RGB LED
+   * LED PWM driver
+   * Arduino
+      + Microprocessor - ATmega328P
+      + USB-Serial converter - FTDI 232R
+      + Voltage Regulator - UA78M05
+      + Connectors
+         - USB-MINI-B
+         - ICSP
+         - **Glue**
+   * **Glue**
+
+^^^^^^^
+RGB LED
+^^^^^^^
+- Circuit is wrong, so lets figure out what I did rather than fix it.
+   * I guess since I'm bringing it up here, that's a pretty big hit as to where the issue lies.
+   * Ok so this is super easy but this is about reading datasheets, and this datasheet has important sections
+     and characteristics important to all LEDS as well as electrical devices.
+
+
+0. Front Page
+
+\
+   a. Features - What the device is good at
+      
+1. Packaging
+
+\
+   a. Physical characteristics of device
+
+      i. What is it telling us about the pins?
+
+   b. "Engineering Dimensions"
+
+      i. :math:`\phi`
+
+      ii. [ ]
+
+     iii. :math:`_{-0}^{+3}`
+
+     iv. 3 diodes, SURK, QB-D, ZG
+
+   c. What direction does current flow through a diode with respect to the triangle?
+
+   d. What's going to get hooked where and to what to make this glow?
+
+2. Electrical
+
+   a. Lens Type
+
+   b. iv (mcd) @ 20A
+      
+      i. flux: :math:`- \ominus \rightarrow`
+
+   c. viewing angle
+
+   d. Wavelengths: Peak, Dominant, Spectral Line half width
+
+   e. Capacitance: why is this here?  Vf;f=1Mhz ?
+
+   f. Vf and Ir
+
+
+3. Maximum Ratings
+
+   a.  Why is TA=25C there?  Does 25C matter specifically?
+
+   b. Power Dissapation: why are they different?
+
+   c. DC forward current vs. peak forward current ?
+
+   d. Reverse voltage - what will happen if exceeded?
+
+   e. Storage and soldering
+
+4. Charts
+
+   a. What's independant and dependant?
+      
+      i. I find this very important
+
+      ii. what did the engineer vary, and what is the result?
+
+      iii. For If vs Vf, does this imply a resistance?
+
+   b. Luminous Intensity vs If
+
+      i. Nice an linear.
+
+      ii. Important to know this kind of characteristic.
+
+   c. Forward Current derating curve
+
+      i. Derating - operation as power drops
+
+      ii. Nice and linear.
+
+      iii. What's that drop off?  Why is it happening at ~85%?
+
+   d. Luminous Intensity vs Ambient
+   
+      i. When might this be interesting?
+
+   e. What's spatial distribution?
+
+5. Packaging
+
+   a. It comes in one.
+
+   b. Soldering Profile
+
+      i. What is wave soldering?
+
+      ii. . Follow profile in time
+
+   c. Mounting
+
+      i. What is pitch?
+
+      ii. What's heat shrink?
+
+      iii. Why are there so many rules to mounting this LED?
+
+
+^^^^^^^
+uA78M28
+^^^^^^^
+0. Front Page
+
+   a. More features
+      
+      i. Chip Package
+
+      ii. Output current
+
+      iii. No external Components
+
+      iv. High Power dissapation
+
+      v.  Why are these items listed explicitly on the front page?  Differentiation and component selection.
+
+   b. Applications
+
+      i. Stuff you can use it in
+
+      ii. Sometimes a very lol-worthy section as it's mostly from marketers
+
+   c. Simplified Schematic
+
+      i. visual example of how easy it is to use
+
+1. Packaging
+
+   a. Hey look, stuff
+
+2. Specifications
+
+   a. Maximum ratings
+
+   b. ESD ratings
+      
+      i. What's all this then
+
+   c. Operating Conditions
+   
+      i. why is output voltage not listed?
+
+      ii. why is current only 500mA
+
+      iii.  Virtual junction temperature?
+   
+\
+   d. Thermal
+
+      i. Junction to ambient
+
+      ii. Junction to case (top)
+
+      iii. Junction to case (bottom)
+
+      iv. See more thermal spe information
+
+      v.  Why is this section getting so much treatment compared to the LED?
+
+         - Magic Smoke
+
+         - Look at the input / output voltages at constant current.  Where's all that excess power going?
+
+\   
+   e. Electrical
+      
+      i. Lets explain all the test conditions.
+
+      ii. Output Voltage
+
+      iii. Input Voltage - What's this saying?
+
+      iv. Ripple rejection
+
+      v. Temp Coefficient of output voltage - losing volts as temperature increases
+
+      vi. Dropout Voltage - doesn't work anymore
+
+      vii. bias currents - what are bias currents?
+
+      viii. short circuit output current - 300mA?  why not 500mA?
+
+      ix. Peak output current again - why is this larger than 500mA?
+
+      x. Functoin Block diagram
+
+3. Application
+
+   a. What's this note, ...not part of component specification...  - they won't stand by the design, but here it is anyways.
+
+   b. aside about capacitors
+
+   c. . Applicatoin curves
+
+4.  Layout
+
+   a. PCB stuff
+
+   b. . Why is the common trace through the package?  What's that tab under COMMON?
+
+\
+5. Packaging
+
+   a. Reel, Tape, Tape Dimensions - Why?  Do you know what a pick and place machine is (field trip)
+
+   b. package dimensions:  what dimentions are these?  gauge plane?
+
+   c. Land Pattern Data - bare minimum information, no real overlap.  What's total width?  minimum bounds box?
+
+   d. What's solder mask?
+
+   e. KVU0003A - why all those little squares?
+
+
+^^^^^^^^^^^^^^^^^^^^^^
+LED Driver - TLV59116F
+^^^^^^^^^^^^^^^^^^^^^^
+
+0. Front Page
+
+   a. Way more features
+      
+      i. Behavior
+         
+         Constant Current
+
