@@ -56,6 +56,7 @@ __________
 - LED Controller: http://www.ti.com/lit/ds/symlink/tlc59116.pdf
 - FTDI-USB: http://www.ftdichip.com/Documents/DataSheets/ICs/DS_FT232R.pdf
 - Arduino Nano: https://www.Arduino.cc/en/uploads/Main/ArduinoNanoManual23.pdf
+- A78M: http://www.ti.com/lit/ds/symlink/ua78m.pdf
 
 Other Material
 ______________
