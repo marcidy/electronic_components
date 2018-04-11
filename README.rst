@@ -57,6 +57,7 @@ __________
 - FTDI-USB: http://www.ftdichip.com/Documents/DataSheets/ICs/DS_FT232R.pdf
 - Arduino Nano: https://www.Arduino.cc/en/uploads/Main/ArduinoNanoManual23.pdf
 - A78M: http://www.ti.com/lit/ds/symlink/ua78m.pdf
+- 16MHz Crystal: http://www.ecsxtal.com/store/pdf/csm-7x.pdf
 
 Other Material
 ______________
@@ -77,6 +78,7 @@ ______________________
    >	*No you go, no, ok, go ahea- what?  oh, ok, i mean, wait, no no, you- i was gonn-  no reall...*
 		
 - Clocking
+    +Crystal Oscillators
 + Voltage High
     + Voltage Low
     + Rise Time
