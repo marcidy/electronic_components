@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+  <head>
+    <link rel="stylesheet"
+          type="text/css"
+          href="../static/class_style.css" />
+  </head>
+  <body>
+
+    <h1 id="power">POWER</h1>
+    <img src="../img/onoffagain.jpg" alt="image" style="width:640px;height:auto"/><br />
+    <em>Have you tried turning if off and turning it back on again?</em><br />
+    <h2 id="what-is-power">What is power?</h2>
+    noun:<br />
+    <ul>
+      <li>The ability to do something or act in a particular way</li>
+      <li>The capacity or ability to direct or influence behavior</li>
+    </ul>
+    verb:<br />
+    <ul>
+      <li>Move or travel with great speed or force</li>
+    </ul>
+    <h2 id="what-is-electrical-power">What is <em>electrical</em> power?</h2>
+    <blockquote>
+      <strong>Time-rate of doing work.</strong><br /><br />
+      <strong>wait...WHAT?</strong><br /><br />
+      Close, it's a <em>Watt</em><br />
+    </blockquote>
+    <h3 id="step-back">Step back</h3>
+    Charge (Q)<br />
+    <ul>
+      <li>&quot;Quantity of Electrons&quot;</li>
+      <li>Actually a &quot;measure of charge&quot;</li>
+      <li>Coulombs</li>
+      <li>conceptually similar to mass, "a quantity of stuff"</li>
+    </ul>
+    Electric Field (E)<br />
+    <ul>
+      <li>Electrical Field just like Gravitational Field</li>
+      <li>Everything wants to go "down"</li>
+      <li>Well, for an E-field, everything wants to go 'positive' but same thing</li>
+    </ul>
+    Current (I)<br />
+    <ul>
+      <li>Flow of electrons</li>
+      <li>charge per unit time, <span class="math"><em>Q/t</em></span></li>
+      <li>Amperes (A)</li>
+    </ul>
+    Work(W)<br />
+    <ul>
+      <li>(uhhh....)</li>
+      <li>A force exherted through a distance</li>
+      <li>(Opposing) charges separated in an Electric field</li>
+      <li>Just like masses separated in a gravitational field</li>
+      <li><span class="math"><em>Q</em><em>x</em><em>E</em><em>x</em><em>d</em></span>, measured in Joules.</li>
+    </ul>
+    Voltage (V)<br />
+    <ul>
+      <li>Work done per unit charge <span class="math"><em>W</em>/<em>Q</em></span></li>
+      <li>A voltage is a <em>Potential Difference</em></li>
+    </ul>
+    <h3 id="further-step-back"><em>Further</em> step back</h3>
+    Force<br />
+    <ul>
+      <li>Mass x Accelleration <span class="math"><em>F</em> = <em>m</em><em>a</em></span></li>
+      <li><dl>
+          <dt>push or pull measured in Newtons (N)</dt>
+          <dd><ul>
+            <li>What is the acceleration from though? it's not <em>from</em> the force if we are defining "Force".</li>
+            <li>It comes from the position of an object in a field, relative to another object.</li>
+            <li><dl>
+                <dt>with attraction of mass, it's the gravitational field, the field which exists all around every object.</dt>
+                <dd><ul>
+                  <li>Tendency to gravitate towards one another</li>
+                </ul>
+                </dd>
+              </dl></li>
+              <li>The Gravitational field is the term for the existence of gravity at every point in space, including a vacuum.</li>
+              <li><dl>
+                  <dt>It is specifically an <strong>energy field</strong></dt>
+                  <dd><ul>
+                    <li>Different positions in the field mean different levels of energy, specifically potential energy</li>
+                    <li>A rock up high has more potential to do damage than one on the ground.</li>
+                  </ul>
+                  </dd>
+                </dl></li>
+          </ul>
+          </dd>
+        </dl></li>
+    </ul>
+    Work<br />
+    <ul>
+      <li>Force over a distance <span class="math"><em>F</em><em>x</em><em>d</em></span></li>
+      <li>e.g. push a rock up a hill</li>
+      <li>Measured in Newton Meters (Nm) or Joules (J)</li>
+    </ul>
+    Stop here for a sec<br />
+    <ul>
+      <li>What's happening when you push a rock up a hill?</li>
+      <li>The Force of Gravity is pushing <em>down</em> and you are pushing <em>up</em>.</li>
+      <li>The rock is being loaded with <strong>energy</strong> by you doing <strong>work</strong> (moving a mass against an energy field through a distance)</li>
+      <li>Your <strong>work</strong> is adding <strong>energy</strong> to the rock by moving it to a higher level, <em>higher relative to the gravitational field</em></li>
+      <li>...Specifically you are increasing the <strong>potential</strong> damage done, not the actual damage done, by the falling rock.</li>
+      <li>...That <strong>potential</strong> energy is stored in the rock's height, it's <strong>distance</strong> along the gravitational field.</li>
+      <li>...Distance relative to the <strong>potential</strong> of the rock doing damage from the <strong>ground</strong></li>
+      <li>...Ground meaining the lowest <strong>energy</strong> state in the system. The rock can't do anything when it's at the lowest possible point.</li>
+      <li>...Releasing that energy will convert the <strong>potential</strong> energy to kinetic energy, the energy of movement,</li>
+      <li>...Movement is the release of the stored <strong>work</strong> during a given period of <strong>time</strong>..which is <strong>power</strong></li>
+      <li>...The rock falling from a certain height will gain power because of the pull of gravity acting over a period of time. Obviously if gravity stopped acting, the rock would stop gaining power, but it would continue to move.</li>
+      <li>Note that, until the work was released, time didn't matter. In reality time to charge does matter, but when talking about a system, it's typical to think of having an already charged battery, for example.</li>
+    </ul>
+    So the <em>difference in the potential energy (W)</em>, a.k.a. the release of energy stored in the rock's location relative to the ground, is equal to the <em>work performed to get the rock there</em>.<br />
+    <span class="math"><em>W</em> = (<em>M</em><em>x</em><em>G</em>)<em>x</em><em>h</em></span><br />
+    <span class="math"><em>h</em></span> is the height separating the mass <span class="math">(<em>M</em>)</span> from the ground in the gravitational field <span class="math">(<em>G</em>)</span><br />
+    For electrons:<br />
+    <span class="math"><em>W</em> = (<em>Q</em><em>x</em><em>E</em>)<em>x</em><em>d</em></span><br />
+    d is the distance separating the charges from the lower electrical state (ground) in the electric field.<br />
+    <strong>Energy</strong><br />
+    <ul>
+      <li>Stored work</li>
+      <li>e.g. The potential lethality instilled in a rock by pushing it up a hill.</li>
+      <li>Force x Distance, also measured in joules (J)</li>
+      <li><em>Money In The Bank</em></li>
+    </ul>
+    <strong>Voltage</strong><br />
+    <ul>
+      <li>Work per unit charge <span class="math"><em>V</em> = <em>W</em>/<em>Q</em></span></li>
+      <li><span class="math"><em>V</em> = <em>W</em>/<em>Q</em> = (<em>Q</em><em>x</em><em>E</em><em>x</em><em>d</em>)/<em>Q</em> = <em>E</em><em>x</em><em>d</em></span> so <span class="math"><em>V</em> = <em>E</em><em>x</em><em>d</em></span></li>
+      <li><dl>
+          <dt>Since work is energy, specifically stored energy, this is the amount of stored energy <em>per electron</em></dt>
+          <dd><ul>
+            <li>Each electron in that &quot;position&quot; in the field contributes an &quot;electron volt&quot;</li>
+            <li>Position doesn't mean literally a point is space, but relative to another specific point of field intensity</li>
+          </ul>
+          </dd>
+        </dl></li>
+    </ul>
+    <strong>Power</strong><br />
+    <ul>
+      <li>Oh, uh, right, we were discussing power.</li>
+      <li><dl>
+          <dt>Work done per unit <em>time</em></dt>
+          <dd><ul>
+            <li><span class="math"><em>P</em> = <em>W</em>/<em>t</em> = (<em>Q</em><em>x</em><em>E</em><em>x</em><em>d</em>)/<em>t</em></span></li>
+          </ul>
+          </dd>
+        </dl></li>
+        <li><dl>
+            <dt>but since <span class="math"><em>V</em> = <em>E</em><em>x</em><em>d</em></span>,</dt>
+            <dd><ul>
+              <li><span class="math"><em>P</em> = <em>V</em><em>x</em><em>Q</em>/<em>t</em></span></li>
+              <li><span class="math"><em>Q</em>/<em>t</em></span> is amps, since <span class="math"><em>I</em> = <em>Q</em>/<em>t</em></span> sooooooo</li>
+              <li><span class="math"><em>P</em> = <em>V</em><em>x</em><em>I</em></span></li>
+            </ul>
+            </dd>
+          </dl></li>
+          <li>It takes energy to clump electrons together in one place, they dont want to be near each other</li>
+          <li>That energy is stored, it was the result of doing work</li>
+          <li>Releasing that energy in a specific time frame is <strong>power</strong></li>
+          <li>Current implies a flow of electrons in time</li>
+          <li>Voltage corresponds to the concept of A &quot;push&quot; and a &quot;how far&quot;</li>
+          <li>Power is &quot;pushing (E)&quot; &quot;something(Q)&quot; &quot;some distance (d)&quot; &quot;for some time(t)&quot;</li>
+    </ul>
+    Electrical power is the change ixins the work (change in energy level) of electrons moving through an electrical field. That's it. It's the presence of an Electrical Field, and electrons at a difference in energy in that field (strength of field x distance) between two levels, the bottom typically referred to as ground.<br />
+    <h4 id="water-wheel">Water Wheel</h4>
+    <a href="https://www.youtube.com/watch?v=0Y0A5yQO9eY">https://www.youtube.com/watch?v=0Y0A5yQO9eY</a><br />
+    Water is a wonderful analogy for electronics.<br />
+    Non-trick, very obvious question: What is analogous to electrical current here?<br />
+    What about voltage?<br />
+    Work?<br />
+    And where is the energy going?<br />
+    What can stand in for Q?<br />
+    So how much power is this wheel generating? <span class=math><em>Fd = Mad</em></span> ?<br />
+    Note:<br />
+    <ul>
+      <li>The water isn't <strong>consumed</strong>, it continues to flow, the amount of water, or charge Q, is constant.</li>
+      <li>The mass of the water and the force applied over the difference in height of the wheel defines the work being done.</li>
+      <li><dl>
+          <dt>How fast the wheel will spin, the change in work per unit time, is also how fast the water will flow.</dt>
+          <dd><ul>
+            <li><dl>
+                <dt>What if the wheel were bigger? smaller?</dt>
+                <dd><ul>
+                  <li>The flow of water is determined by the mass of the wheel. The voltage doesn't change, so what is changing?</li>
+                  <li>V=IR, P = V^2/R</li>
+                  <li>Resistance here is mass of the wheel. the bigger wheel literally resists the flow of water</li>
+                </ul>
+                </dd>
+              </dl></li>
+              <li><dl>
+                  <dt>Does the amount of power consumed change?</dt>
+                  <dd><ul>
+                    <li>The amout of <em>energy consumed per unit time</em> does change, it increases, so yes, the power consumed by the wheel increases for a given time period</li>
+                  </ul>
+                  </dd>
+                </dl></li>
+                <li><dl>
+                    <dt>Does the amount of water change?</dt>
+                    <dd><ul>
+                      <li>no, it cant. The total amount of charge available is not influenced by the wheel size.</li>
+                      <li>What changes is how much water is required to spin the wheel.  A bigger wheel needs more water, specifically more water flow, or more water per second, or more current, to spin as fast as before</li>
+                      <li>But again, the water does not disappear, it merely flows through the system from a high level to a lower level.  It releases energy, stored work, into the wheel.</li>
+                    </ul>
+                    </dd>
+                  </dl></li>
+          </ul>
+          </dd>
+        </dl></li>
+    </ul>
+    <h2 id="power-is-a-system">Power is a <strong>system</strong></h2>
+    <ul>
+      <li>While we talk about power in terms of VI consumed by a component, Power is not about one component</li>
+      <li>A battery of a specific voltage has a specific amount of charge, Q, and can only emit a portion of that Q per second, Amps.</li>
+      <li>The amount of time it takes to fully discharge all Q on a per-hourly basis is called an Amp-hour (Ah).</li>
+      <li>The amount of power available is the Watt-hour</li>
+      <li>For building a DC circuit, you want to know the voltage you need, and the current it uses, then you pick a battery capable of that power (VI) which contains enough charge (Q) to provide your desired Amp-hours or Watt-hours of operation.</li>
+    </ul>
+    Example<br />
+    <blockquote>
+      I want to power 10 dot-stars (5V 30mA max) for 24 hours.<br />
+      <em>10 * 5V * 30 mA * 24h = 36 Watt-hours</em><br />
+      Note that this has nothing to do with circuit topology, aka, how the LED's are hooked up.<br />
+      Series: (10 * 5V) * 30mA * 24h = 36 Wh = <strong>0.72Ah at 50 Volts</strong><br />
+      Parallel: 5V * (10 * 30mA) * 24h = 36 Wh = <strong>7.20Ah at 5 Volts</strong><br />
+      <span style="color:#ccffb3;">Can't fool mother nature.</span><br />
+    </blockquote>
+    <h3 id="where-does-power-go-then">Where does power &quot;go&quot; then?</h3>
+    <ol style="list-style-type: decimal">
+      <li>Work<br />
+        <blockquote>
+          The thing we want done, spinning a motor, computation, signal processing, etc<br />
+        </blockquote></li>
+        <li>radiation<br />
+          <blockquote>
+            EM (infrared, light, rf..)<br />
+          </blockquote></li>
+          <li>Heat<br />
+            <blockquote>
+              Electrons moving through a conductor will jostle other atoms and nuclei, which generates heat. The energy is imparted onto these impeding objects.<br />
+              This is how a resistor dissapates power.<br />
+            </blockquote></li>
+    </ol>
+    Power is consumed, or dissapated, as it is transferred to other objects in the system. As the water flows down, and carries the potential energy with it, and transfers that energy to other objects. At the bottom of the system, the water still flows, but it's potential energy has all been converted. That flow of water cannot do more work.<br />
+
+
+    <ul>
+      <li>If you are confused, don't be.</li>
+      <li>Power is Voltage multiplied by Current</li>
+      <li>But it's also all that other shit.</li>
+      <li>But you only need to track three things:</li>
+      <ul>
+        <li>Voltage</li>
+        <li>Current</li>
+        <li>Heat</li>
+      </ul>
+      <li>Voltage and current are factors of the design of the circuit.  To do X, you need V and I.</li>
+      <li>Power is defined then.  You need to supply it, for a certain number of hours, or years, but it's a design requirement</li>
+      <li>Heat can kill a design.  Compute the heat for a 5x200 grid of 5V 30mA LEDs and you'll melt solder (i've done it)</li>
+      <li> The whole point of the above is to prove to you that you can understand it, so it can be a thing you know you can pretty much ignore.  Design some things then try to power them.  Once you get a feel for it, it will be a part of your process.</li>
+      <li>I's very NOT complicated.  If you think you are doing something amazing, either the battery doesn't exist or you are going to melt something.  <em>Design that thing anyways though</em></li>
+      <li><strong>Design your circuit, be aware of heat, and then try to find the power supply that will work for you.  Size and capacity are the two main tradeoffs that aren't cost.</strong></li>
+
+      <h1 id="power-electronics">Power Electronics</h1>
+      <h2 id="sources">Sources</h2>
+      <h4 id="electro-mechanical-generators">Electro-Mechanical Generators</h4>
+      <ul>
+        <li>Motor in reverse - Magnets, E and B fields</li>
+        <li><dl>
+            <dt>Water</dt>
+            <dd><ul>
+              <li>natural movement like river or waves</li>
+              <li>artificual potential differences like dams</li>
+            </ul>
+            </dd>
+          </dl></li>
+          <li><dl>
+              <dt>Fire</dt>
+              <dd><ul>
+                <li>Steam</li>
+              </ul>
+              </dd>
+            </dl></li>
+            <li>Wind</li>
+      </ul>
+      results in AC - fundamentally, something is spinning<br />
+      <h4 id="radiative">Radiative</h4>
+      <ul>
+        <li><dl>
+            <dt>Solar</dt>
+            <dd><ul>
+              <li>DC</li>
+            </ul>
+            </dd>
+          </dl></li>
+          <li><dl>
+              <dt>Nuclear</dt>
+              <dd><ul>
+                <li>Heat, Steam</li>
+                <li>AC</li>
+              </ul>
+              </dd>
+            </dl></li>
+      </ul>
+      <h2 id="dc">DC</h2>
+      Energy Density - Watt Hours / size Discharge rates - flatter / constant / consistent dischrage rate is generally better.<br />
+      Lithium Batteries<br />
+      <blockquote>
+        <dl>
+          <dt>Lithium Ion (Li+, Li-ion)</dt>
+          <dd><ul>
+            <li>3.6 or 7.2 volts</li>
+            <li>higher density than LiPo</li>
+          </ul>
+          </dd>
+          <dt>Lithium Polymer (LiPo)</dt>
+          <dd><ul>
+            <li>3.6, 7.2 volts</li>
+            <li>slightly better capacity than Lithium Ion</li>
+            <li>Lower Weight, good for drones or phone, credit-card sized electronics</li>
+          </ul>
+          </dd>
+        </dl>
+        <strong>BEWARE OF THE BULGE</strong><br />
+        <dl>
+          <dt>Charging</dt>
+          <dd><ul>
+            <li><strong>DANGER</strong> Very Specific requirements</li>
+            <li><strong>SLIGHTLY LESS DANGER</strong> Protection circuits (CPB/CPM)</li>
+          </ul>
+          </dd>
+        </dl>
+        batteryuniversity.com<br />
+      </blockquote>
+      Solar<br />
+      <blockquote>
+        <dl>
+          <dt>Reverse LED</dt>
+          <dd><ul>
+            <li>Light incident on special material that loses electrons easily</li>
+            <li>Voltage difference forms, current flows, get power</li>
+            <li>Relatively inefficient, but still powerful, sufficient to charge LiPos</li>
+          </ul>
+          </dd>
+        </dl>
+      </blockquote>
+      <h2 id="ac">AC</h2>
+      Generators - Something is mechanically moving, usually causing a big magnet to move through a conductive coil. - Movement is necessary to generate a <strong>flow</strong> of electrons. - Movement creates a constantly changing potential differences with which the electrons keep up. - Without movement, the electrocs are static, and there is no flow electrons.<br />
+      The physical work is transfered to electrical work, electrical energy.<br />
+      Power - AC power is not like DC power. DC power &quot;sets up&quot; and then kind of stays there. - AC introduces a new element, frequency. - Circuits behave differently when using different frequencies of input. - For power, the best input is DC. How to ..trasform..err..rectify that...er...convert..wait...<br />
+      <h4 id="circuits-and-components">Circuits and Components</h4>
+      <blockquote>
+        Transformers, rectifiers, regulators, converters, amplifiers<br />
+      </blockquote>
+      <h3 id="inductors">Inductors</h3>
+      <ul>
+        <li>&quot;induce&quot; a flow of charge via an input magnetic field, or vice versa.</li>
+        <li>Coil of a conductor</li>
+        <li>A magnetic field oscillating through a conductive coil createsa a flow of electrons.</li>
+        <li><dl>
+            <dt>Why?</dt>
+            <dd><ul>
+              <li>Well, there's why, and then there's why. This is just how electrons interact with magnetic fields.</li>
+              <li>things fall towards the center of mass</li>
+              <li>electrons move in the direction orthoganol to the change in magnetic field.</li>
+              <li>orthogoal to - right angle to, but with more dimensions. right hand rule</li>
+            </ul>
+            </dd>
+          </dl></li>
+      </ul>
+      <h3 id="transformers">Transformers</h3>
+      <ul>
+        <li>Magnetic field in one device <em>induces</em> field in another device.</li>
+        <li><dl>
+            <dt>The field's are the same strength</dt>
+            <dd><ul>
+              <li>Specifically, we know that the Power is the same</li>
+              <li>Power in = Power out</li>
+              <li>Always! Newton's 2nd law of thermo-dynamics. Heat is power!</li>
+            </ul>
+            </dd>
+          </dl></li>
+          <li><dl>
+              <dt>If the inductors are the same, then the voltage and current in and out are the same,</dt>
+              <dd><ul>
+                <li>Power is transferred by the electro-magnetic field</li>
+              </ul>
+              </dd>
+            </dl></li>
+            <li>if they are NOT the same, it's by &quot;turns&quot; i.e. the number of turns of a coil</li>
+            <li><dl>
+                <dt>How do turns make a differece?</dt>
+                <dd><ul>
+                  <li>Each turn is like an antenna receiving the field and emitting eletrons</li>
+                  <li>Every turn is another antenna</li>
+                  <li>Each antenna is connected in series</li>
+                </ul>
+                </dd>
+              </dl></li>
+              <li><dl>
+                  <dt><strong>A bunch of same things in series implies higher voltage, lower current, always</strong></dt>
+                  <dd><ul>
+                    <li><dl>
+                        <dt>So if a send VI in froma 10 turn inductor to a 20 turn inductor...</dt>
+                        <dd><ul>
+                          <li>Which will have a higher voltage?</li>
+                          <li>Which will have a higher current?</li>
+                        </ul>
+                        </dd>
+                      </dl></li>
+                      <li>P = P, so VI = VI</li>
+                  </ul>
+                  </dd>
+                </dl></li>
+                <li><dl>
+                    <dt>These things are literally magic.</dt>
+                    <dd><ul>
+                      <li>EM is a fundamental force of the universe, the other is gravity.</li>
+                      <li>This coil of wire is manipulating that force in a very non-trivial way.</li>
+                      <li>It's just a coil of wire!</li>
+                    </ul>
+                    </dd>
+                  </dl></li>
+      </ul>
+      <h3 id="capacitors">Capacitors</h3>
+      <blockquote>
+        Capacitors have the &quot;capacity&quot; to store charge a.k.a electrons. Kind of like tiny batteries.<br />
+      </blockquote>
+      <ul>
+        <li><dl>
+            <dt>buckets of electrons</dt>
+            <dd><ul>
+              <li>If there is a dip in the flow, these electrons can be used to maintain the line current/voltage</li>
+              <li>...until the flow is restored, ..or they run out.</li>
+              <li>...Kind of. As one electon leaves, the voltage goes down by one electron, lowering the total field.</li>
+            </ul>
+            </dd>
+          </dl></li>
+          <li>Stabilize power lines/<strong>rails</strong> by &quot;filtering out&quot; dips.</li>
+      </ul>
+      <h3 id="diodes">Diodes</h3>
+      <blockquote>
+        Two Odes. DiOdes. ok, two electrodes.<br />
+      </blockquote>
+      <ul>
+        <li>Electrons can only flow in one direction, or &quot;asymmetric conductance&quot;</li>
+        <li><dl>
+            <dt>How?</dt>
+            <dd><ul>
+              <li>p-n junction is set up to resist flow</li>
+              <li>&quot;doped&quot; materials for p and n side</li>
+              <li>creates a static E-field which must be over come before flow in other direction.</li>
+              <li>Kind of like a capacitor that has to be &quot;drained&quot; first.</li>
+            </ul>
+            </dd>
+          </dl></li>
+      </ul>
+      <h3 id="rectifier-circuit">Rectifier Circuit</h3>
+      <blockquote>
+        <dl>
+          <dt>Rectification in electronics means a fairly specific thing:</dt>
+          <dd><em>Make something go in the desired direction.</em><br />
+          </dd>
+        </dl>
+      </blockquote>
+      <ul>
+        <li><dl>
+            <dt>99% of the time it's 4 diodes.</dt>
+            <dd><ul>
+              <li>2 sets of 2 diodes in series, connected in parallel</li>
+              <li>By grounding the middle of the rectifier, an AC current is forced to flow in one direction.</li>
+              <li>all this does is flip the sign of the negative voltage, take the absolute value if you will.</li>
+              <li>The cost is the energy consumed by the 2 diodes active any time.</li>
+            </ul>
+            </dd>
+          </dl></li>
+          <li><dl>
+              <dt>The universal footprint of a rectifier is</dt>
+              <dd><ol style="list-style-type: lower-alpha">
+                <li>right next to the transformer output</li>
+                <li>4 things. Maybe 4 diodes in a regular pattern, maybe an IC with 4 pins (that contains the rectifying diodes)</li>
+                <li>Will most likely lead into a capacitor network and a regulator</li>
+              </ol>
+              </dd>
+            </dl></li>
+            <li>rectifiers generally lie right next to the wall power, transforming it from positive/negative to positive positive.<br />
+              <blockquote>
+                <img src="../img/bridge_rectifier.gif" alt="image" /><br />
+              </blockquote></li>
+      </ul>
+      <h3 id="regulators">Regulators</h3>
+      <blockquote>
+        Regulators keep things the same, in some sense,as in a specific value, or range-bound.<br />
+      </blockquote>
+      <ul>
+        <li><dl>
+            <dt>Reference</dt>
+            <dd><ul>
+              <li>Some input which indicates a desired output level.</li>
+              <li>can be a voltage or current created by a resistor network.</li>
+            </ul>
+            </dd>
+          </dl></li>
+          <li><dl>
+              <dt>Sampler</dt>
+              <dd><ul>
+                <li>senses output voltage, perhaps using a known, large resistance to induce a current</li>
+              </ul>
+              </dd>
+            </dl></li>
+            <li><dl>
+                <dt>Comparator</dt>
+                <dd><ul>
+                  <li>compares the sample to the refernse and feeds that into the controller</li>
+                </ul>
+                </dd>
+              </dl></li>
+              <li><dl>
+                  <dt>Controller</dt>
+                  <dd><ul>
+                    <li>Determines if the output neets to be restricted or not</li>
+                  </ul>
+                  </dd>
+                </dl></li>
+                <li><dl>
+                    <dt>Linear regulators</dt>
+                    <dd><ul>
+                      <li>Inefficient</li>
+                      <li>Basically a voltage divider, two resistors.</li>
+                      <li><dl>
+                          <dt>Where's all that power going???</dt>
+                          <dd><ul>
+                            <li>Need a heatsink! bah.</li>
+                          </ul>
+                          </dd>
+                        </dl></li>
+                        <li>Can't raise voltage about input level</li>
+                    </ul>
+                    </dd>
+                  </dl></li>
+                  <li><dl>
+                      <dt>Switching</dt>
+                      <dd><ul>
+                        <li>efficient, minimal waste means minimal heat</li>
+                        <li>&quot;switches&quot; device on and off</li>
+                        <li>generate higher voltages, or even opposite polatity</li>
+                        <li><dl>
+                            <dt>How this magic?</dt>
+                            <dd><ul>
+                              <li><dl>
+                                  <dt>Operational Amplifiers</dt>
+                                  <dd><ul>
+                                    <li>These are the holy grail of understanding components.</li>
+                                    <li>I am considering a class on thses but not sure. more value from understanding microcontroller</li>
+                                    <li>Maybe add a class after, discuss then.</li>
+                                  </ul>
+                                  </dd>
+                                </dl></li>
+                            </ul>
+                            </dd>
+                          </dl></li>
+                      </ul>
+                      The regulator senses the delivered line voltage/current and either releases or restricts the supply to keep the output constant.<br />
+                      Can be used to change the voltage level as well. The transformer may yield 12V but we want 5V.<br />
+                      </dd>
+                    </dl></li>
+      </ul>
+      <h3 id="converters">Converters</h3>
+      <blockquote>
+        Handles changes in voltage levels.<br />
+      </blockquote>
+      <ul>
+        <li>Can step up or down, though generally output current is limited, even when stepping down.</li>
+        <li><dl>
+            <dt>Different types</dt>
+            <dd><ul>
+              <li>Boost (Step up)</li>
+              <li>Buck (Step down)</li>
+              <li>Inverting</li>
+              <li>flyback - Boost/Buck with isolating transformer</li>
+              <li><dl>
+                  <dt>Can be AC/DC or DC/DC</dt>
+                  <dd><ul>
+                    <li>includes internal rectification</li>
+                  </ul>
+                  </dd>
+                </dl></li>
+            </ul>
+            </dd>
+          </dl></li>
+          <li><dl>
+              <dt>When building circuits that need different voltage levels</dt>
+              <dd><ul>
+                <li>wether to convert up or down depends on the needs of the circuit and the efficiency of the conversions.</li>
+              </ul>
+              </dd>
+            </dl></li>
+            <li><dl>
+                <dt>Go read about them so you know what's available.</dt>
+                <dd><ul>
+                  <li>Multiple outputs</li>
+                  <li>positive / negative</li>
+                  <li>current ratings</li>
+                  <li><dl>
+                      <dt>purposes</dt>
+                      <dd><ul>
+                        <li>Logic level converters</li>
+                        <li>bus adapters</li>
+                      </ul>
+                      </dd>
+                    </dl></li>
+                    <li>adjustables, remote on/off etc.</li>
+                </ul>
+                </dd>
+              </dl></li>
+      </ul>
+      <h3 id="amplifier">Amplifier</h3>
+      <blockquote>
+        Power amplification means adding Voltage, Current or both to a circuit.<br />
+      </blockquote>
+      <ul>
+        <li>With amplification,you generally have access to the voltage levels you want with a sufficient supply of current</li>
+        <li>You are just trying to increase the power of some other signal / circuit up to that level.</li>
+        <li>One method of exchanging voltage for current was the transformer, but the power did not increase.</li>
+        <li>Another was a boost converter, but that didn't increase the power</li>
+        <li><dl>
+            <dt>So, when talking about adding power to something, generally we are going to take some signals, like audio, and boost it's output.</dt>
+            <dd><ul>
+              <li><dl>
+                  <dt>Why are we adding more power?</dt>
+                  <dd><ul>
+                    <li>Well, we want to release more energy somewhere else.</li>
+                    <li>Specifically with audio, we want to move a large magnet so it pushes large volumes of air are pleasant, repeating intervals.</li>
+                  </ul>
+                  </dd>
+                </dl></li>
+            </ul>
+            </dd>
+          </dl></li>
+          <li><dl>
+              <dt>A very common amplifier is a <strong>Push-Pull</strong> amplifier</dt>
+              <dd><ul>
+                <li>It pushes</li>
+                <li>...Then it pulls.</li>
+                <li>which makes sense, the signal is oscillating, so to <em>s t r e t c h</em> it, we push in one direction, and pull in the other.</li>
+              </ul>
+              </dd>
+            </dl></li>
+      </ul>
+      Reference<br />
+      <ul>
+        <li><dl>
+            <dt>Required to know when to push and when to pull, we need some reference, above which we push, and below which we pull.</dt>
+            <dd><ul>
+              <li>Ground! ground is a always a good referense point</li>
+              <li>but that means we have voltages which will go <strong>below</strong> ground!</li>
+              <li><dl>
+                  <dt>These are negative voltages. Remember, voltages are <strong>relative differences</strong> they are not absolute numbers</dt>
+                  <dd><ul>
+                    <li>My 10, 5, 0 is someone elses 5, 0, -5. It's the same circuit.</li>
+                  </ul>
+                  </dd>
+                </dl></li>
+            </ul>
+            </dd>
+          </dl></li>
+      </ul>
+      <h2 id="power-transfer">Power Transfer</h2>
+      <ul>
+        <li>The short story is that only half of the generated power will flow <em>through</em> the amplifier</li>
+        <li><dl>
+            <dt>Need to generate twice what is needed:</dt>
+            <dd><ul>
+              <li>1/2 to energize the signal for the work we want done</li>
+              <li>1/2 to power the circuit to do that job.</li>
+            </ul>
+            </dd>
+          </dl></li>
+          <li><dl>
+              <dt>wait, if only 1/2 goes to the load...</dt>
+              <dd><ul>
+                <li><strong>HHEEAAATTTTTT</strong></li>
+                <li>Yeahh, you're going to need to control heat.</li>
+              </ul>
+              </dd>
+            </dl></li>
+            <li><dl>
+                <dt>We went over various heat issues prevoiusly but this is different, you need to pull a lot of heat from the components out of the case as fast as possible.</dt>
+                <dd><ul>
+                  <li><dl>
+                      <dt>heat sinks pull heat from component</dt>
+                      <dd><ul>
+                        <li>substances can lower the <em>thermal resistance</em> between materials like thermal paste</li>
+                        <li>Lower thermal resistance means greater thermal conductance, i.e. heat flow.</li>
+                      </ul>
+                      </dd>
+                    </dl></li>
+                    <li><dl>
+                        <dt>Heat will flow through the heat sink from it's contact surface to it's edges</dt>
+                        <dd><ul>
+                          <li>More edges/surface area, the more heat can exchange with air, hence all the fins</li>
+                        </ul>
+                        </dd>
+                      </dl></li>
+                      <li>air flows across the heat sink's surface area, removing heat through conduction</li>
+                      <li>Air moves away from the head sink, and dissapates heat through convection</li>
+                </ul>
+                </dd>
+              </dl>
+            </li>
+            <li><dl>
+                <dt>Physical properties of materials determine how much power can be dissapated in a givem time frame.</dt>
+                <dd><ul>
+                  <li>Any heat not disappated is retained, possibly to the point of melting the device.</li>
+                </ul>
+                </dd>
+              </dl></li>
+      </ul>
+      <h1 id="gain-clone">Gain Clone</h1>
+      <blockquote>
+        <a href="http://www.circuitbasics.com/design-hi-fi-audio-amplifier-lm3886/">http://www.circuitbasics.com/design-hi-fi-audio-amplifier-lm3886/</a><br />
+      </blockquote>
+      <ul>
+        <li>A gain clone is a DIY version of a $3,000 amplifier called the Gain Card. Costs about $200, maybe less.</li>
+        <li>Someone opened up the commercial version and just duplicated it.</li>
+      </ul>
+      Let's just dig through this.<br />
+      HIGHLY suggest reading through this - great design process - great result - a really great DIY project covering analog circuitry.<br />
+  </body>
+</html>
