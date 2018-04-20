@@ -1,0 +1,51 @@
+Ok, i guess were assigning homework now!
+
+So you all have an Arduino nano clone with packaging defect (except you who had to leave early, try to get a hold of me if you can.)
+
+We're back to talking about device to device communication over the i2c bus.  We went over what registers are, how to clock in data, and how the i2c protocol defines start conditions, data validity, and stop conditions.
+
+In class we'll be opinion up the code for the Arduino Wire library to see how it's actually implemented.  While this blends software with hardware, the goal is to interact with low level libraries for accessing hardware capabilities. 
+
+Reading:
+https://www.arduino.cc/en/Reference/Wire
+This is the library interface.  Nano isn't mentioned but it doesn't matter, the SDA pin is A4 and the SCK pin is A5.  Other than that, it's all the same.
+
+Look at the "See Also" section, specifically the Master Writer and Master Reader.  In the Master Reader section, there is code for the slave.
+
+You job:
+1) pick an address between 10 and 30.  What's immediately wrong with me asking you to do this?
+2)  The function requestEvent is called a "call-back".  It will be called from somewhere else.  Read about the OnRequest function linked lower in the page.  A call-back needs to be registered so it knows when to fire.  Same with onReceive.
+
+Ok, we're going to invent the internet.  Kind of.  Try to get the following working:
+
+1) set an address
+2) create a function "ack()" which sends back your address to the master, address = 0x05
+    void ack() {
+        something here almost identical to the examples;
+    }
+3) make pin d5 an output
+    setup() {
+        Wire.being(your address selection);
+        pinMode(10, OUTPUT);
+    }
+
+4) make a function called "light() which does the following:
+
+void light() {
+    if digitalRead(10) == HIGH {
+        digitalWrite(10, LOW);
+    } else {
+        digitalWrite(10, HIGH);
+}
+
+register it
+
+add this to  setup()
+    Wire.onRequest(light);
+
+
+Hopefully that works.
+
+In class, I'll have a chip acting as the master and we'll all work together to get everyone's code working so please make mistakes or this will be a short class.
+
+The materials for class-3 of the Readme in github are still valid, but at somepoint ill rearrainge the classes and bring power forward.
