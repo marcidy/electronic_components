@@ -4,7 +4,7 @@ So you all have an Arduino nano clone with packaging defect (except you who had 
 
 We're back to talking about device to device communication over the i2c bus.  We went over what registers are, how to clock in data, and how the i2c protocol defines start conditions, data validity, and stop conditions.
 
-In class we'll be opinion up the code for the Arduino Wire library to see how it's actually implemented.  While this blends software with hardware, the goal is to interact with low level libraries for accessing hardware capabilities. 
+In class we'll be opening up the code for the Arduino Wire library to see how it's actually implemented.  While this blends software with hardware, the goal is to interact with low level libraries for accessing hardware capabilities. 
 
 Reading:
 https://www.arduino.cc/en/Reference/Wire
@@ -23,7 +23,7 @@ Ok, we're going to invent the internet.  Kind of.  Try to get the following work
     void ack() {
         something here almost identical to the examples;
     }
-3) make pin d5 an output
+3) make pin 10 an output
     setup() {
         Wire.being(your address selection);
         pinMode(10, OUTPUT);
