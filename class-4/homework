@@ -23,26 +23,33 @@ Ok, we're going to invent the internet.  Kind of.  Try to get the following work
     void ack() {
         something here almost identical to the examples;
     }
-3) make pin 10 an output
+
+3) make pin 6 an output
     setup() {
         Wire.being(your address selection);
-        pinMode(10, OUTPUT);
+        pinMode(6, OUTPUT);
     }
 
 4) make a function called "light() which does the following:
 
 void light() {
-    if digitalRead(10) == HIGH {
-        digitalWrite(10, LOW);
+    if digitalRead(6) == HIGH {
+        digitalWrite(6, LOW);
     } else {
-        digitalWrite(10, HIGH);
+        digitalWrite(6, HIGH);
 }
+call this function from ack()
 
-register it
+register ack as the call-back in the examples.
 
-add this to  setup()
+add this to setup()
     Wire.onRequest(light);
 
+in loop() just add a delay of 100:
+
+void loop() {
+   delay(100);
+}
 
 Hopefully that works.
 
