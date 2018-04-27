@@ -1,3 +1,11 @@
+NOTE
+====
+Google group for interested peoples!
+
+https://groups.google.com/forum/#!forum/beyond-hobby-electronics
+
+Hopefully this works!  Either way, will sort it out next meeting.
+
 ==============
 Pwning Arduino
 ==============
