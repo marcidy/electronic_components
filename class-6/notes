@@ -1,0 +1,235 @@
+=====================
+Computer Architecture
+=====================
+
+What is architecture?
+
+Theoretical
+* Turing
+* Von Neumann
+
+What is a program vs what is architecture?
+
+I have 4 bits, how many programs can I write?
+{ (0, 0),
+  (0, 1),
+  (1, 0),
+  (0, 1)
+}
+
+What does each program do?
+Who knows, who cares.
+
+If I have 4 bits outcome, what can they be?
+
+I have 4 bits, how many programs can I write?
+{ (0, 0),
+  (0, 1),
+  (1, 0),
+  (0, 1)
+}
+
+So without specifying architecture, I how many possible interpretations for each program?
+4 interpretations (2^2 output bits) for each input
+REMEBER:
+I haven't given you information about what goes to what or why, these are just possible arraingements for a 4bit PROGRAM
+
+so how many architectures can I support?
+I have to pick only 1 outcome for each input, meaning (0,0) cannot be both (1,0) OR (1,1) for a 2 bit output system.
+
+BUT, i can re-use the input results multiple times.
+(0, 0) AND (0, 1) can both map to (1, 1)
+
+so each input can map to one of 4 outputs.
+4 for 4 = 16
+
+So this machine is capable of 16 states.
+
+{ (0, 0) : (1, 1),
+  (0, 1) : (1, 1),
+  (1, 0) : (0, 1),
+  (1, 1) : (1, 1)
+}
+
+This is one state, it is uniquely defined by the input <-> output results.
+Why unique?  Well, any change is a different state.
+While there is onle 2 output states in this machine, it is still fully specified.
+
+This is state SPACE.  I have 4 bits in, 4 bits out, 16 states.
+
+What happes if I apply the same state machine to the result?
+
+Now i only have 2 inputs, since they were collapsted to either (1, 1) or (1, 1).  But im using the same machine, just seeing what the 2nd iteration of the machien will do.
+
+{ (0, 1) : (1, 1),
+  (1, 1) : (1, 1)
+}
+
+So, we end up where (1, 1) has absorbed the output after 2 iterations.  
+
+This is a design which will never:
+1) loop
+2) loop infinitely
+
+In fact, if we defined a condtition called HALT that was:
+if S3=S2=S1=S0 then HALT
+
+We can prove that applying the machine to any inputs will do so in 5 steps.
+
+This is called the halting problem.  It's a general problem, and you cannot solve it in any theoretical math that we know today.
+
+
+Let's get back to architecture though.  What's the different between what I just defined an architecture?
+
+Turing Machine
+
+A turning machine is a generalized form of computation.  It consists of:
+a) a tape head
+b) infinitely long tape
+c) instructions
+  c.1) Read
+  c.2) Write
+  c.3) Forward
+  c.4) Reverse
+
+I can read this bit, I can write this bit, I can move forward to the next bit, I can reverse to the previous bit.  Each bit is either 0 or 1.
+Based on this, you can make a state machine like above.  That statemacine.   The differce here is that the machine may do many different things.  a "write" code might be the result of 10 read/forwards/20 back/reads/ 11 read/forwrds.   Even stil, those parameters can change.  However, based on whatever the CODES are, the instruction is a write.
+
+So you can imagine a statemachine and coding paring now.  That's not generalized however.
+
+A Universal Turning MAchine is a Turing machien that can create any other turning machine.  So it's a calculator of calculators.  And it can operate on the calculators themselves as the calculators are in operation.
+
+
+Von Neumann architecture
+What's that mean practically?
+
+It might seem obvious that computers are Hard Drive -> Memory -> CPU -> Memory -> Harddrive, but that wasn't a given.
+
+Instructions in memorry
+execute "left to right, up to down"
+
++-------------------------------+
+|                               |
+|    +---------------------+    |
+|    |  Control Unit       |    |
+|    |                     |    |
+|    |   +--------------+  |    |
+|    |   | Instruction  |  |    |
+|    |   |     Register |  |    |
+|    |   +--------------+  |    |
+|    |                     |    |
+|    |   +--------------+  |    |
+|    |   | Program      |  |    |
+|    |   |     Counter  |  |    |
+|    |   +--------------+  |    |
+|    |                     |    |
+|    +---------------------+    |
+|                               |
+|    +---------------------+    |
+|    |       ALU           |    |
+|    +---------------------+    |
+|                               |
+|    +---------------------+    |
+|    |                     |    |
+|    | Processor Registers |    |
+|    |                     |    |
+|    +---------------------+    |
+|                               |
++--------^---------+------------+
+         |         |
+         |         |
+         |         |
++--------+---------v------------+
+|        Program memory         |
+|                               |
+|    +---------------------+    |
+|    |    Instructions     |    |
+|    |                     |    |
+|    +---------------------+    |
+|                               |
+|    +---------------------+    |
+|    |     Data            |    |
+|    |                     |    |
+|    +---------------------+    |
+|                               |
++-------------------------------+
+
+This should really look familiar, up to Program Memory and Program Counter.
+
+We're going to go over the CPU insutrctions which work here.  This is farther and farther away from generalized electronic component datasheets, but I'm trying to get across that these are all the same thing.  Componenents have varying levels of all these things now.
+Resistors, Capacitors, Inductors:
+Important for how they shape the electric field (voltage) and the current characteristics of the circuit.
+Power and heat characteristics which are the things you need to be aware of to design a circuit.
+
+So, what's the prgram counter? 
+
+Let's quickly load a program into memory.
+
+Layout of registers in ATmega328
+[1 0 0 1 0 1 1 0]
+Ok, so what number is this?
+LSB/MSB
+
+Load 2 bytes for 16bit instruction.
+high byte, low byte.
+
+Is this specific way oof loading important?
+
+We had put the CPU into "program" mode
+ok, so we've loaded all the data in this way.
+We restart the CPU, it's now out of PRGRAM mode.
+
+Now what?
+Always starts in the same place.  That's guaranteed by the architecture.
+
+Ok, but NOW what?
+the Program counter tells us where to go, to a point.
+
+Instructions:
+load, store, ALU shit (SUB is all you need)
+bez, bgz, blz, buc
+PDP-11 8 bits instructions
+
+Branching instructions are difficuly specifically because they are not sequential.  What does it mean to branch exactly?  Do I want to return?  That's usualyl what runctions do.  return to what?  just the address?  or the state?  if state, how do I handle a change in state if the branched address changes registers around and doesn't set them back?
+
+
+
+Stack
+
+[sensors and peripherials]
+Periphery:
+The border between inside and outside, or how to communicate with the outside world.
+
+Input/output pins are periphery.  There are subsystems between them and the core processor, like setting direction, reading/writing, and configuring specific fuctions.
+
+They can be analog or digital, but what does that moean exactly? 
+
+Digital pins drive digital electronics.  For example, our friend the i2c bus.  The i2c system in the chip is a on die peripheral  it requires communication with the soutside world, so it interfaceds with the pin, io subsystem.  
+
+Analog
+Everything is analog, specifically when the heat or power is high enough.
+But, for here, analog means the chip can interact with something that give a signal other than > VH or < VL.
+However, the PROCESSOR is still digital, so there are some limitations.  Digital values must map to 0-255.  For a 5V system with 256 steps, the resolutions you get is 5/256.  No matter what you do, the processor cannot handle smaller divisions for this at 5V.  So analog here is not EXACTLY analog in the true sense.
+
+So, sensors.  Sensors are going to generate either digital or analog values.  Atmel has done a lot of work to make it easy for you, and so has Arduino.  analogRead(pin) gets you 0-255.
+
+Lets look at the ADC logic.
+
+Common way to get partial values out is a PWM, pulse width modulation.
+moduleation is always "Change the value by something else" aka to modulate.
+By modulating the pulse width, it can replicating feeding enough charge/time to look like a specific voltage for an amount of time.  e.g. If I feed water into a bucket with a hole in it, the bucket can look full as long as I send water in at a rate >= the rate it's leaking out.
+
+
+
+       / -------------\
+     /                  \
+   /                      \
+ /                          \_______________
+
+5V for 1 clock kind of looks like 2.5V if you squint.  5V for 1/2, 0V for 1/2
+
+So by varying the time of the pulse, and teh width of the "on" time duty cycle, e.g. time it's doing work per cycle) can simulate analog out.
+
+Remember capacitors?  Well, they act like buckets with holes in them.  If you hook a capacitor up to this, you'll see less variation of the voltage.  Just a note, this is the kind of stuff glue does in a circuit.
+
+
