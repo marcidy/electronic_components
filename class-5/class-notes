@@ -1,0 +1,116 @@
+Ada Lovelace
+
+Why?
+    - History is cruel.  She learned up to the state of the art in math in her day, and died.  She understood computation as an abstract concept.  Not just "settling an account," but a tool to solve perhraps all analytical problems.  Universal computation.
+
+To understand what she was doing, let's fast forward to a Turing Machine. A turing "machine" is an abstract concept of a machine.  
+This machine can do a thing, as opposed to necessarily exist:
+
+First tape.  Like a mix tape.  it's a thing that holds some kind of data.  In this case, it's 0s and 1s.  As this is an abstract concept, the tape can be infinitely long.
+
+Now Machine:
+1) it can read a tape
+2) it can advance a tape
+3) It can reverse a tape
+3) it can write a 1 or 0 to a tape
+
+so, it's a long string of 1s and 0s that the machine moves forwards and backwards.  At each point, it can read the tape, move the tape forwards, backwards, (over) write the tape, or any combination of these.
+
+So, the machine has no concept of what to compute on it's own.  it only has 4 actions.
+The tape is the instructions.
+
+so what can be done?
+
+that's not the right question to ask.  the right question to ask is "What can be emulated".
+
+Can it emulate some other kind of machine?
+At what point is this machine capable of computing everything?  etc.
+
+These are the questoins Ada was starting to get to when she passed.  it's a travesty, really.
+
+
+So what does binary have to do with this?
+
+Well if you didn't knw we'll be going over binary arithmatic, but shortly will begin to construct elements of a microprocessor, both peripherals and core elements.  It's extremely easy really, because of these concepts of the tape and the machine.  Ada was working in base 10, which is excrutiating.  Binary is wonder.
+
+Why?
+
+well, whats the smallest bit of information you can have about anything? 
+    - effectively set membership.  Does it belong or not.
+    - based on this I can implement all of set theoery easily.
+
+Let's start with the basic operations on bits.
+
+If I have 1 bit, how many stats of the world can I model?
+What about 2?
+
+
+Let's start with 2.
+Actually no, lets start with the atmel datasheet!
+pg 27,28
+Status register
+    - Literally the first register.
+    x-Global Interrupt
+    x-Copy Storage
+    Half Carry
+    Sign
+    Two's compliment
+    Negative
+    Zero
+    Carry
+
+    6 bits in themost important register just to handle arithmatic!
+
+
+why?
+
+Back to w bits and 4 states:
+
+and/or/not/nor/nand/xor
+    nand memory?  made from transistors all configured as nand gates 
+
+truth tables
+xor 0  1
+0   0  1
+1   1  0
+
+etc
+
+stop with xor
+
+
+ok, but let's talk abot addition.
+
+quick, what's 
+0 + 0? 0
+0 + 1? 1
+1 + 0? 1
+1 + 1? 0
+
+it's XOR!  holy crap!  but..wait, 1+1 isn't 0, it's 2!
+
+Yeah, as with decimal arithmatic, we need to carry the 1.
+
+so we can do this:
+b0  b1  xor carry
+0   0   0   0     
+0   1   1   0
+1   0   1   0
+1   1   0   1
+
+What's carry the?  carry = 1 AND 1.
+
+so b1 + b2 = b1 XOR b2 and sets carry as b1 and b2.
+
+carry the 1!
+
+
+This actually is what sets the carry flag in the reguster.  the carry flag in the register is what you need when you add 1 to 0xFF. it give you that extra bit needed to know if your addition overflowed.
+
+Likewise with negative, it's necessary to mark that a number iwent negative (assuming it can, unsigned numbers cant and therefore case use the negaive flag for something else)
+
+Two's compliement is an alternitive way of representing numbers in binary.  I don't really feel like going over it, sorryy but it's just not necessary for what we're doing.
+
+Suffice to say it captures all required information about what the number is via a different pattern of 1s and 0s.
+
+
