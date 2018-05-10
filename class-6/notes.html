@@ -1,0 +1,334 @@
+<html>
+  <head>
+    <style>
+body {background: black;
+  color: yellow;
+font-size: 36;}
+div {  color:yellow;
+  background: black;
+  font-size: 36;}
+
+    </style>
+  </head>
+  <body>
+    <div>
+
+      =====================
+      Computer Architecture
+      =====================
+
+      What is architecture?
+
+      Theoretical
+      * Turing
+      * Von Neumann
+
+      What is a program vs what is architecture?
+
+      I have 4 bits, how many programs can I write?
+      <pre>
+{ (0 0),
+  (0 1),
+  (1 0),
+  (0 1)
+}
+      </pre>
+      What does each program do?
+      Who knows, who cares.
+
+      If I have 4 bits outcome, what can they be?
+
+      I have 4 bits, how many programs can I write?
+      <pre>
+{ (0 0),
+  (0 1),
+  (1 0),
+  (0 1)
+}
+      </pre>
+
+      So without specifying architecture, I how many possible interpretations for each program?
+      4 interpretations (2^2 output bits) for each input
+      REMEBER:
+      I haven't given you information about what goes to what or why, these are just possible arraingements for a 4bit PROGRAM
+
+      so how many architectures can I support?
+      I have to pick only 1 outcome for each input, meaning (0,0) cannot be both (1,0) OR (1,1) for a 2 bit output system.
+
+      BUT, i can re-use the input results multiple times.
+      (0, 0) AND (0, 1) can both map to (1, 1)
+
+      so each input can map to one of 4 outputs.
+      4 for 4 = 16
+
+      So this machine is capable of 16 states.
+
+      <pre>
+{ (0 0) : (1 1),
+  (0 1) : (1 1),
+  (1 0) : (0 1),
+  (1 1) : (1 1)
+}
+      </pre>
+
+      This is one state, it is uniquely defined by the input <-> output results.
+      Why unique?  Well, any change is a different state.
+      While there is onle 2 output states in this machine, it is still fully specified.
+
+      This is state SPACE.  I have 4 bits in, 4 bits out, 16 states.
+
+      The initial input state 0, S0.
+      What happes if I apply the same state machine to the result?
+
+      Now i only have 2 inputs, since they were collapsted to either (1, 1) or (1, 1).  But im using the same machine, just seeing what the 2nd iteration of the machien will do.
+
+      <pre>
+{ (0 1) : (1 1),
+  (1 1) : (1 1)
+}
+<pre>
+
+This is S1.
+So, we end up where (1 1) has absorbed the output after 2 iterations, meaning all inteeations going forward will result in (1 1)  
+
+This is a design which will never:
+1) loop
+2) loop infinitely
+
+In fact, if we defined a condtition called HALT that was:
+if S3=S2=S1 then HALT
+
+We can _prove_ that applying the machine to any inputs will do so in 5 steps.
+
+This is called the halting problem.  It's a general problem, and you cannot solve it in any theoretical math that we know today.  We can solve it for this machine because it is riduclously simple.  While theoretical, if you are writing simple logic which including changing state, and you can track what each state will do, you can show that a simple program will not loop infinitely.  Just by doing these state transition diagrams.  Which are basically like the logic we already spoke about.
+
+
+Let's get back to architecture though.  What's the different between what I just defined an architecture?
+
+Turing Machine
+
+A turning machine is a generalized form of computation.  It consists of:
+a) a tape head
+b) infinitely long tape
+c) instructions
+  c.1) Read
+  c.2) Write
+  c.3) Forward
+  c.4) Reverse
+
+These are not instructions like "print," they are the instruction the machine understands.  It cannot do anything else.  
+
+I can read this bit, I can write this bit, I can move forward to the next bit, I can reverse to the previous bit.  Each bit is either 0 or 1.
+Based on this, you can make a state machine like above.   The differce here is that the machine may do many different things.  A "write" code might be the result of 10 read/forwards/20 back/reads/ 11 read/forwrds.   Even stil, those parameters can change.  However, based on whatever the defined CODES are, the instruction is a write.
+
+So,can you write a real computer program with this?  Yes, because the instructions are not the same as the interpretation.  
+
+So you can imagine a state machine and coding pair now that are separate from each other.  That's not as generalized, or abstract as it gets.
+
+A Universal Turning Machine is a Turing machine that can mimic (perhaps virtualize in today's parlance) any other turning machine.  So it's a calculator of calculators.  And it can operate on the calculators themselves as the calculators are in operation.
+
+
+Von Neumann architecture
+What's that mean practically?
+
+It might seem obvious that computers are Hard Drive -> Memory -> CPU -> Memory -> Harddrive, but that wasn't a given.
+
+<pre>
+
++-------------------------------+
+|                               |
+|    +---------------------+    |
+|    |  Control Unit       |    |
+|    |                     |    |
+|    |   +--------------+  |    |
+|    |   | Instruction  |  |    |
+|    |   |     Register |  |    |
+|    |   +--------------+  |    |
+|    |                     |    |
+|    |   +--------------+  |    |
+|    |   | Program      |  |    |
+|    |   |     Counter  |  |    |
+|    |   +--------------+  |    |
+|    |                     |    |
+|    +---------------------+    |
+|                               |
+|    +---------------------+    |
+|    |       ALU           |    |
+|    +---------------------+    |
+|                               |
+|    +---------------------+    |
+|    |                     |    |
+|    | Processor Registers |    |
+|    |                     |    |
+|    +---------------------+    |
+|                               |
++--------^---------+------------+
+         |         |
+         |         |
+         |         |
++--------+---------v------------+
+|        Program memory         |
+|                               |
+|    +---------------------+    |
+|    |    Instructions     |    |
+|    |                     |    |
+|    +---------------------+    |
+|                               |
+|    +---------------------+    |
+|    |     Data            |    |
+|    |                     |    |
+|    +---------------------+    |
+|                               |
++-------------------------------+
+
+</pre>
+
+This should really look familiar, up to Program Memory and Program Counter.
+
+We're going to go over the CPU insutrctions which work here.  This is farther and farther away from generalized electronic component datasheets, but I'm trying to get across that these are all the same thing.  Componenents have varying levels of all these things now.
+Resistors, Capacitors, Inductors:
+Important for how they shape the electric field (voltage) and the current characteristics of the circuit.
+Power and heat characteristics which are the things you need to be aware of to design a circuit.
+
+So, what's the prgram counter? 
+
+Let's quickly load a program into memory.
+
+Layout of registers in ATmega328
+[1 0 0 1 0 1 1 0]
+Ok, so what number is this?
+LSB/MSB
+
+Load 2 bytes for 16bit instruction.
+high byte, low byte.
+
+Is this specific way oof loading important?
+
+[[ Look at register layout. ]]
+12; pg. 34
+
+In-system reprogrammable flash program memory
+(in system??  what?)
+Bootloader / application
+
+Program counter - 14bits wide (what?)
+
+Specific layer:
+0x0000 to 0x3FFF  -- how many bits is that?
+
+Program counter points to a line of instructions
+
+Data memory
+quick note on how processors work
+load 0xBB into X
+load 0xBB into Y
+add X Y store in Z
+store Z in 0xBB
+
+Have to tell it exactly where the data is so it grabs whats in that memory location
+puts it into tha special register for the left and right side of the operation
+performs the operation, and has to stick the result *somewhere* that is known to both of you.
+
+[[ timing diagram on page 36 ]]
+
+
+We had put the CPU into "program" mode
+ok, so we've loaded all the data in this way.
+We restart the CPU, it's now out of PRGRAM mode.
+
+Now what?  What absolutely has to happen first?
+
+Always starts in the same place.  That's guaranteed by the architecture.
+15 SCRST - System Control and Resset
+pg 72.
+Reset Vector -- absolute jump to reset handling routine
+
+How?
+the Program counter tells us where to go, to a point.
+
+Ok, but NOW what?
+
+Instructions:
+load, store, ALU shit (SUB is all you need)
+branch equal to zero
+branch grater than zero
+branch less than zero
+branch unconditional
+
+
+Stack
+
+Stack pointer 11.5
+p. 29
+
+Watch dog timer
+What if something fucks up?
+15.8 Watchdog Timer
+pg 76
+
+
+
+Peripherals
+18. IO ports
+p97
+18.2 look how complicatd!  so what are all those ANDs and MUXes doing?
+pg 102 - even worse!
+
+just selecting functions based on configuration.
+
+Data bus: bus is a term for a collection of signals of the same type.  so all similar i/o pins will be on the data bus.
+
+
+
+
+
+
+[sensors and peripherials]
+Periphery:
+The border between inside and outside, or how to communicate with the outside world.
+
+Input/output pins are periphery.  There are subsystems between them and the core processor, like setting direction, reading/writing, and configuring specific fuctions.
+
+They can be analog or digital, but what does that moean exactly? 
+
+Digital pins drive digital electronics.  For example, our friend the i2c bus.  The i2c system in the chip is a on die peripheral  it requires communication with the soutside world, so it interfaceds with the pin, io subsystem.  
+
+Analog
+Everything is analog, specifically when the heat or power is high enough.
+But, for here, analog means the chip can interact with something that give a signal other than  VH or VL.
+However, the PROCESSOR is still digital, so there are some limitations.  Digital values must map to 0-255.  For a 5V system with 256 steps, the resolutions you get is 5/256.  No matter what you do, the processor cannot handle smaller divisions for this at 5V.  So analog here is not EXACTLY analog in the true sense. 
+
+What can you do if you have a 12V thing to measure?
+Scale it, but you lose resolution this way.  you'll get accurate steps, %-wise, but will lose ability to show small variations.
+
+What to do?
+Get a bigger external ADC, or divide between two.
+
+So, sensors.  Sensors are going to generate either digital or analog values.  Atmel has done a lot of work to make it easy for you, and so has Arduino.  analogRead(pin) gets you 0-255.
+
+Lets look at the ADC logic.
+
+Common way to get partial values out is a PWM, pulse width modulation.
+moduleation is always "Change the value by something else" aka to modulate.
+By modulating the pulse width, it can replicating feeding enough charge/time to look like a specific voltage for an amount of time.  e.g. If I feed water into a bucket with a hole in it, the bucket can look full as long as I send water in at a rate more than the rate it's leaking out.
+
+
+<pre>
+      / -------------\
+    /                  \
+  /                      \
+/                          \_______________
+
+</pre>
+
+5V for 1 clock kind of looks like 2.5V if you squint.  5V for 1/2, 0V for 1/2
+
+So by varying the time of the pulse, and teh width of the "on" time duty cycle, e.g. time it's doing work per cycle) can simulate analog out.
+
+Remember capacitors?  Well, they act like buckets with holes in them.  If you hook a capacitor up to this, you'll see less variation of the voltage.  Just a note, this is the kind of stuff glue does in a circuit.
+
+    </div>
+
+  </body>
+</html>
+
