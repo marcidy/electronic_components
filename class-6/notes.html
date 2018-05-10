@@ -1,70 +1,92 @@
-=====================
-Computer Architecture
-=====================
+<html>
+  <head>
+    <style>
+body {background: black;
+  color: yellow;
+font-size: 36;}
+div {  color:yellow;
+  background: black;
+  font-size: 36;}
 
-What is architecture?
+    </style>
+  </head>
+  <body>
+    <div>
 
-Theoretical
-* Turing
-* Von Neumann
+      =====================
+      Computer Architecture
+      =====================
 
-What is a program vs what is architecture?
+      What is architecture?
 
-I have 4 bits, how many programs can I write?
+      Theoretical
+      * Turing
+      * Von Neumann
+
+      What is a program vs what is architecture?
+
+      I have 4 bits, how many programs can I write?
+      <pre>
 { (0 0),
   (0 1),
   (1 0),
   (0 1)
 }
+      </pre>
+      What does each program do?
+      Who knows, who cares.
 
-What does each program do?
-Who knows, who cares.
+      If I have 4 bits outcome, what can they be?
 
-If I have 4 bits outcome, what can they be?
-
-I have 4 bits, how many programs can I write?
+      I have 4 bits, how many programs can I write?
+      <pre>
 { (0 0),
   (0 1),
   (1 0),
   (0 1)
 }
+      </pre>
 
-So without specifying architecture, I how many possible interpretations for each program?
-4 interpretations (2^2 output bits) for each input
-REMEBER:
-I haven't given you information about what goes to what or why, these are just possible arraingements for a 4bit PROGRAM
+      So without specifying architecture, I how many possible interpretations for each program?
+      4 interpretations (2^2 output bits) for each input
+      REMEBER:
+      I haven't given you information about what goes to what or why, these are just possible arraingements for a 4bit PROGRAM
 
-so how many architectures can I support?
-I have to pick only 1 outcome for each input, meaning (0,0) cannot be both (1,0) OR (1,1) for a 2 bit output system.
+      so how many architectures can I support?
+      I have to pick only 1 outcome for each input, meaning (0,0) cannot be both (1,0) OR (1,1) for a 2 bit output system.
 
-BUT, i can re-use the input results multiple times.
-(0, 0) AND (0, 1) can both map to (1, 1)
+      BUT, i can re-use the input results multiple times.
+      (0, 0) AND (0, 1) can both map to (1, 1)
 
-so each input can map to one of 4 outputs.
-4 for 4 = 16
+      so each input can map to one of 4 outputs.
+      4 for 4 = 16
 
-So this machine is capable of 16 states.
+      So this machine is capable of 16 states.
 
+      <pre>
 { (0 0) : (1 1),
   (0 1) : (1 1),
   (1 0) : (0 1),
   (1 1) : (1 1)
 }
+      </pre>
 
-This is one state, it is uniquely defined by the input <-> output results.
-Why unique?  Well, any change is a different state.
-While there is onle 2 output states in this machine, it is still fully specified.
+      This is one state, it is uniquely defined by the input <-> output results.
+      Why unique?  Well, any change is a different state.
+      While there is onle 2 output states in this machine, it is still fully specified.
 
-This is state SPACE.  I have 4 bits in, 4 bits out, 16 states.
+      This is state SPACE.  I have 4 bits in, 4 bits out, 16 states.
 
-The initial input state 0, S0.
-What happes if I apply the same state machine to the result?
+      The initial input state 0, S0.
+      What happes if I apply the same state machine to the result?
 
-Now i only have 2 inputs, since they were collapsted to either (1, 1) or (1, 1).  But im using the same machine, just seeing what the 2nd iteration of the machien will do.
+      Now i only have 2 inputs, since they were collapsted to either (1, 1) or (1, 1).  But im using the same machine, just seeing what the 2nd iteration of the machien will do.
 
+      <pre>
 { (0 1) : (1 1),
   (1 1) : (1 1)
 }
+<pre>
 
 This is S1.
 So, we end up where (1 1) has absorbed the output after 2 iterations, meaning all inteeations going forward will result in (1 1)  
@@ -110,6 +132,8 @@ Von Neumann architecture
 What's that mean practically?
 
 It might seem obvious that computers are Hard Drive -> Memory -> CPU -> Memory -> Harddrive, but that wasn't a given.
+
+<pre>
 
 +-------------------------------+
 |                               |
@@ -157,6 +181,8 @@ It might seem obvious that computers are Hard Drive -> Memory -> CPU -> Memory -
 |                               |
 +-------------------------------+
 
+</pre>
+
 This should really look familiar, up to Program Memory and Program Counter.
 
 We're going to go over the CPU insutrctions which work here.  This is farther and farther away from generalized electronic component datasheets, but I'm trying to get across that these are all the same thing.  Componenents have varying levels of all these things now.
@@ -188,7 +214,7 @@ Bootloader / application
 Program counter - 14bits wide (what?)
 
 Specific layer:
-0x0000 to 0x3FFF  <-- how many bits is that?
+0x0000 to 0x3FFF  -- how many bits is that?
 
 Program counter points to a line of instructions
 
@@ -215,7 +241,7 @@ Now what?  What absolutely has to happen first?
 Always starts in the same place.  That's guaranteed by the architecture.
 15 SCRST - System Control and Resset
 pg 72.
-Reset Vector -> absolute jump to reset handling routine
+Reset Vector -- absolute jump to reset handling routine
 
 How?
 the Program counter tells us where to go, to a point.
@@ -269,7 +295,7 @@ Digital pins drive digital electronics.  For example, our friend the i2c bus.  T
 
 Analog
 Everything is analog, specifically when the heat or power is high enough.
-But, for here, analog means the chip can interact with something that give a signal other than > VH or < VL.
+But, for here, analog means the chip can interact with something that give a signal other than  VH or VL.
 However, the PROCESSOR is still digital, so there are some limitations.  Digital values must map to 0-255.  For a 5V system with 256 steps, the resolutions you get is 5/256.  No matter what you do, the processor cannot handle smaller divisions for this at 5V.  So analog here is not EXACTLY analog in the true sense. 
 
 What can you do if you have a 12V thing to measure?
@@ -284,14 +310,16 @@ Lets look at the ADC logic.
 
 Common way to get partial values out is a PWM, pulse width modulation.
 moduleation is always "Change the value by something else" aka to modulate.
-By modulating the pulse width, it can replicating feeding enough charge/time to look like a specific voltage for an amount of time.  e.g. If I feed water into a bucket with a hole in it, the bucket can look full as long as I send water in at a rate >= the rate it's leaking out.
+By modulating the pulse width, it can replicating feeding enough charge/time to look like a specific voltage for an amount of time.  e.g. If I feed water into a bucket with a hole in it, the bucket can look full as long as I send water in at a rate more than the rate it's leaking out.
 
 
+<pre>
+      / -------------\
+    /                  \
+  /                      \
+/                          \_______________
 
-       / -------------\
-     /                  \
-   /                      \
- /                          \_______________
+</pre>
 
 5V for 1 clock kind of looks like 2.5V if you squint.  5V for 1/2, 0V for 1/2
 
@@ -299,4 +327,8 @@ So by varying the time of the pulse, and teh width of the "on" time duty cycle, 
 
 Remember capacitors?  Well, they act like buckets with holes in them.  If you hook a capacitor up to this, you'll see less variation of the voltage.  Just a note, this is the kind of stuff glue does in a circuit.
 
+    </div>
+
+  </body>
+</html>
 
