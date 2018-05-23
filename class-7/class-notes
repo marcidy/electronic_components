@@ -1,0 +1,37 @@
+What is coding and what is programming?
+
+Program:
+A planed series of future events, nothing to do with language
+
+Coding:
+A system of words, letters or other symbols substituted for other words, letters or symbols
+
+A program is a ordered list of instructions.  Code is a way to express those instructions.  A program exists for the human, the human designs the task with some goal in mind.  The comptuer does not care, it will only execute the list of instructions.  The code is the expression of those instructions in a way the computer can unambiguously execute.
+
+Program:
+add 1 to 2
+
+Code:
+add  reg 1    reg 2         Z
+1010 00000001 00000010  --> 00000011
+
+
+Instructkion set Summary
+
+Mnemonic
+Oerands (used in operation)
+Description
+
+Op:
+  operand 1, directin, operation  e.g. Rd = Rd + Rr
+
+flags effected by operation
+
+# clocks
+
+
+"Immediates"
+
+Program counter
+
+
