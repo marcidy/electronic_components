@@ -18,20 +18,91 @@ add  reg 1    reg 2         Z
 
 Instructkion set Summary
 
-Mnemonic
-Oerands (used in operation)
-Description
-
-Op:
-  operand 1, directin, operation  e.g. Rd = Rd + Rr
-
-flags effected by operation
-
-# clocks
-
 
 "Immediates"
 
 Program counter
 
 
+class-7-notes
+11.1  Overview
+
+Register file
+Stack pointer
+Status register
+Program Counter
+Flash Program Memory
+Instruction register
+Instruction decode
+Data Memory
+
+X, Y, Z register (indirects)
+
+Instruction timing
+Hey!  another timing diagram.
+ - fetch
+ - exectute/fetch  (why is this possible?)
+
+ALU fetch and operate: why is THIS possible?
+
+12. AVR Memories
+12.3 diagram  SDRAM vs. Internal SDRAM
+SDRAM - synchronous dynamic random access memory
+ - synchronous means clock in all cases.
+
+
+In System Programmable Flash Program Memory (Program Memory)
+Program flash / Boot loader
+
+Data Memory (SDRAM)
+  - Why SDRAM?
+  - Register File, I/O memory, Extended I/O memory
+
+Addressing modes
+ - Direct
+ - Indirect with Displacement
+ - Indirect
+ - Indirect with Pre-decrement
+ - Indirect with Post-decrement
+
+EEPROM Data Memory
+  - Why EEPROM?
+  - Interesting note:
+    4.1 precautions about writing.  This is why you read datasheets!
+
+I/O memory
+  - I/Os and peripherals are in I/O memory space
+
+
+/*  on if time */
+
+14. Power management
+  - You're familiar with sleep modes on your computer.  This is how they work.
+  - 14.s quick overview of chart.
+
+15.  System Control and Reset
+  - resetting the AVR
+  - Read this section to know what happens at power-on, e.g. how the thing actually boots from electricity to running codes.
+
+
+30. Boot Loader (don't cover)
+31. Memory Programming
+  - This is how the chip is programmed "electrically" e.g. the communication protocal between the SPI serial interface and the progrm memory.
+  - USB -> FTDI -> SPI -> Program Memory
+Load Extended Address Byte
+ 0x4D 0x00 <address> 0x00
+
+Load Page
+  - What's a page?  extra memory that uses an extra n bytes.  e.g. 2 bytes means 4 pages.
+
+Difference between load and write?
+  - 30.8
+  - Load page into temporary buffer
+  - Page Write
+
+Fuse and Lock bits:
+  - e.g. "Don't allow write to Program Memory"
+  - in situations where the application code allows memory addressing, this prevents the user from accessing memory that would allow them to corrupt or "hack" the code.
+
+Note about values:
+  \bar{var} means NOT variable, e.g., \bar{RESET} means 0 = reset.
