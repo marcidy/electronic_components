@@ -371,8 +371,15 @@ There's a lot going on but a lot if it you don't need to know right now.
 
 **avr-objcopy**
     - hex? eeprom? elf? eep?
-    - EEP.
+    - EEP!
 
+|
+
+.. image:: img/dmesg.png
+
+|
+
+.. image:: img/port.png
 
 Program
 _______
@@ -394,7 +401,7 @@ Typing the above on the commandline will program your microcontroller the exact 
 
     -C : some configuration file
     -p : microcontroller core
-    -c : bootloader code
+    -c : programmer id
     -P : port
     -b : baud rate for serial communication
     -D : disable auto-erase for flash
@@ -551,3 +558,8 @@ Linking everything together...
 By including that library, all these new lines are required.  there are ways to handle this, called Makefiles, and are available on the web, but that's required to make a nice tool to handle this outside the ide.
 
 To truly break free, you also need to move to c++ completely, no more .ino files.  You need to write the .h and .cpp files directly.  It's not hard, but it's more to learn.
+
+avr-objdump
+    You can take the elf file and convert it to a mixture of assembly and code.  This is an excellent way to learn both how the code is compiled down to assembly without learning the intermediate steps, and also what the assembly does since you can map it back to your intention.
+
+

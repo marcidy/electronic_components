@@ -1,0 +1,10 @@
+body {
+    background: #202020;
+    color: #FFFF00;
+    white-space: pre-wrap;
+}
+
+div {
+    border-color: red;
+    font-size: 20px;
+}
