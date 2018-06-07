@@ -1,0 +1,922 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
+<title>Output</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7952 2016-07-26 18:15:59Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+body {
+	background: #202020;
+  color: #FFFF00;
+	font-size: 30px;
+	margin: 0;
+	border: 0;
+	padding:0;
+}
+
+img {
+  background: #FFFFFF;
+	width:100%;
+	max-width: 600px;
+}
+
+div {
+	margin: 0;
+	border: 0;
+	padding:0;
+}
+
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+<style type="text/css">
+
+/*
+ * Stylesheet overrides for ReSTview
+ */
+
+/* Some breathing space for the text */
+
+body {
+    margin: 3em;
+    max-width: 50em;
+}
+
+/* Monospace text */
+
+tt {
+    color: #234F32;
+}
+
+/* Doctest blocks */
+
+blockquote > pre.doctest-block {
+    margin-left: 0;
+}
+
+/* Literal blocks */
+
+pre.literal-block {
+    color: #AA4400;
+}
+
+/* Block quotations */
+
+blockquote {
+    margin-left: 2em;  /* to match with pre.code et al */
+    margin-right: 2em;
+}
+
+/* Code blocks */
+
+pre.code {
+    background: inherit;
+}
+
+/* Footnotes */
+
+a.footnote-reference,
+a.fn-backref {
+    font-size: xx-small;
+    vertical-align: super;
+    line-height: normal;
+    text-decoration: none;
+}
+a.footnote-reference:hover,
+a.fn-backref:hover {
+    text-decoration: underline;
+}
+
+table.footnote {
+    border: none;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 20px;
+    margin-right: 0.5em;
+    font-size: small;
+}
+table.footnote td {
+    border: none;
+    padding-top: 1em;
+    padding-left: 0px;
+}
+table.footnote tr:first-child > td.label {
+    border-top: 1px solid #eee;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+table.footnote + table.footnote {
+    margin-top: 0;
+}
+table.footnote + table.footnote td {
+    border: none;
+    padding-top: 0;
+}
+
+/* System messages (aka errors) */
+
+div.system-messages h1 {
+    color: red;
+}
+div.system-message {
+    border: none;
+    border-left: 1ex solid red;
+    margin-left: -3em;
+    margin-top: 0;
+    padding-left: 4.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: red;
+    background: #fff8f8;
+}
+div.system-message p.system-message-title {
+    margin-top: 0;
+    font-weight: bold;
+}
+
+</style>
+<style type="text/css">
+pre .hll { background-color: #ffffcc }
+pre  { background: #ffffff; }
+pre .c { color: #888888 } /* Comment */
+pre .err { color: #FF0000; background-color: #FFAAAA } /* Error */
+pre .k { color: #008800; font-weight: bold } /* Keyword */
+pre .o { color: #333333 } /* Operator */
+pre .ch { color: #888888 } /* Comment.Hashbang */
+pre .cm { color: #888888 } /* Comment.Multiline */
+pre .cp { color: #557799 } /* Comment.Preproc */
+pre .cpf { color: #888888 } /* Comment.PreprocFile */
+pre .c1 { color: #888888 } /* Comment.Single */
+pre .cs { color: #cc0000; font-weight: bold } /* Comment.Special */
+pre .gd { color: #A00000 } /* Generic.Deleted */
+pre .ge { font-style: italic } /* Generic.Emph */
+pre .gr { color: #FF0000 } /* Generic.Error */
+pre .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+pre .gi { color: #00A000 } /* Generic.Inserted */
+pre .go { color: #888888 } /* Generic.Output */
+pre .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+pre .gs { font-weight: bold } /* Generic.Strong */
+pre .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+pre .gt { color: #0044DD } /* Generic.Traceback */
+pre .kc { color: #008800; font-weight: bold } /* Keyword.Constant */
+pre .kd { color: #008800; font-weight: bold } /* Keyword.Declaration */
+pre .kn { color: #008800; font-weight: bold } /* Keyword.Namespace */
+pre .kp { color: #003388; font-weight: bold } /* Keyword.Pseudo */
+pre .kr { color: #008800; font-weight: bold } /* Keyword.Reserved */
+pre .kt { color: #333399; font-weight: bold } /* Keyword.Type */
+pre .m { color: #6600EE; font-weight: bold } /* Literal.Number */
+pre .s { background-color: #fff0f0 } /* Literal.String */
+pre .na { color: #0000CC } /* Name.Attribute */
+pre .nb { color: #007020 } /* Name.Builtin */
+pre .nc { color: #BB0066; font-weight: bold } /* Name.Class */
+pre .no { color: #003366; font-weight: bold } /* Name.Constant */
+pre .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+pre .ni { color: #880000; font-weight: bold } /* Name.Entity */
+pre .ne { color: #FF0000; font-weight: bold } /* Name.Exception */
+pre .nf { color: #0066BB; font-weight: bold } /* Name.Function */
+pre .nl { color: #997700; font-weight: bold } /* Name.Label */
+pre .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+pre .nt { color: #007700 } /* Name.Tag */
+pre .nv { color: #996633 } /* Name.Variable */
+pre .ow { color: #000000; font-weight: bold } /* Operator.Word */
+pre .w { color: #bbbbbb } /* Text.Whitespace */
+pre .mb { color: #6600EE; font-weight: bold } /* Literal.Number.Bin */
+pre .mf { color: #6600EE; font-weight: bold } /* Literal.Number.Float */
+pre .mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
+pre .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
+pre .mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
+pre .sa { background-color: #fff0f0 } /* Literal.String.Affix */
+pre .sb { background-color: #fff0f0 } /* Literal.String.Backtick */
+pre .sc { color: #0044DD } /* Literal.String.Char */
+pre .dl { background-color: #fff0f0 } /* Literal.String.Delimiter */
+pre .sd { color: #DD4422 } /* Literal.String.Doc */
+pre .s2 { background-color: #fff0f0 } /* Literal.String.Double */
+pre .se { color: #666666; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
+pre .sh { background-color: #fff0f0 } /* Literal.String.Heredoc */
+pre .si { background-color: #eeeeee } /* Literal.String.Interpol */
+pre .sx { color: #DD2200; background-color: #fff0f0 } /* Literal.String.Other */
+pre .sr { color: #000000; background-color: #fff0ff } /* Literal.String.Regex */
+pre .s1 { background-color: #fff0f0 } /* Literal.String.Single */
+pre .ss { color: #AA6600 } /* Literal.String.Symbol */
+pre .bp { color: #007020 } /* Name.Builtin.Pseudo */
+pre .fm { color: #0066BB; font-weight: bold } /* Name.Function.Magic */
+pre .vc { color: #336699 } /* Name.Variable.Class */
+pre .vg { color: #dd7700; font-weight: bold } /* Name.Variable.Global */
+pre .vi { color: #3333BB } /* Name.Variable.Instance */
+pre .vm { color: #996633 } /* Name.Variable.Magic */
+pre .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
+</style>
+</head>
+<body>
+<div class="document" id="output">
+<h1 class="title">Output</h1>
+
+<p>Controlling external devices can be done by sending some kind of signal, or by varying power delivered to the device.  As microcontrollers cannot generally provide sufficient power, many external devices need their own power source.  However, this means the microcontroller still needs to send some kind of control signal</p>
+<div class="section" id="analog">
+<h1>Analog</h1>
+<p>Analog outputs will typically a voltage, current or frequency to an external device as a signal.  In reality all 3 are delivered at the same time, though some will be limited.  In the case of frequency, a DC signal is still a frequency, it just happens to be 0.</p>
+<div class="section" id="applications">
+<h2>Applications</h2>
+<div class="section" id="switching">
+<h3>Switching</h3>
+<div class="section" id="relay">
+<h4>Relay</h4>
+<img alt="basic-relay.jpg" src="basic-relay.jpg" />
+<p>Relays will switch a power source on and off as controlled by an input source.  Relays are typically mechanical, where the input source will trigger an electromagnet to complete or break a circuit.</p>
+<img alt="nc-no-co.jpg" src="nc-no-co.jpg" />
+<ul class="simple">
+<li>Normally Open (NO) means the really is off until the input signal is received, which turns it on.  The switch is normally open.</li>
+<li>Normally Closed (NC) is the opposite, normally on until the input signal is received, the switch is turned on.</li>
+</ul>
+<p>As relays are switches, they follow the same conventions like SPST, SPDT, DPDT, etc.  Basically a single relay can open one or many switches at the same time.</p>
+<p>Relays can have timers also, configurable over a range of intervals.</p>
+<p>They also come in a range of power ratings for both input and output.  Some are drivable by a microcontroller, and can switch wall power on and off.</p>
+<p>Control:
+Control voltage to turn output on or off.</p>
+<p>Note:
+When switching anything, nothing is immediately on or off.  When opening of closing a switch, electricity will arc when the connection is broken but still close.  This causes damage over time.  Not a huge deal, but something to be aware of.</p>
+</div>
+<div class="section" id="transistor">
+<h4>Transistor</h4>
+<img alt="transistor-current-explanation.png" src="transistor-current-explanation.png" />
+<p>A transistor is taught as a digital switch, which is true, but from an analog perspective, it is really a valve.  The voltage or current into the base will control the output voltage or current.  A lower voltage can control a higher voltage by opening and closing the valve, aka the voltage or current into the base.  Creating a lower voltage output is done using a voltage divider, as below.</p>
+<p>Power is always an issue, however, so be sure the transistor is rated for the power dissipated by it.</p>
+<p>Control:</p>
+<p>Can use analog input, such as from a DAC, or a digital PWM to control transistor output between low and high voltage.</p>
+</div>
+</div>
+<div class="section" id="motor-control">
+<h3>Motor Control</h3>
+<p>Motor control will vary the position, speed, and acceleration of a movable object.  This is not always rotation, and other motion usually falls under the term actuation.</p>
+<p>To overcome friction and inertia to move and accelerate, the motor must apply a force through a distance, aka, must convert electrical energy into kinetic energy.  The amount of energy the motor can output is named torque, which takes into account angular motion.  Torque is the measurement of the energy required to start motion, accelerate, and achieve top speed.</p>
+<p>To accurately control a motor, one most be aware of the position, speed, and acceleration that is being output by the motor and compare that to the input.  Many motors accumulate an error with each motion, which means when the signal calls for a rotation, the motor will not always rotate the same spot, or may continually overshoot by more each time.</p>
+<p>Some motors are more susceptible to this that others, and some can be reset easier than others.  Control of this error is covered elsewhere, but be aware that it exists if you need precise motion.</p>
+<div class="section" id="brushed-dc-motor">
+<h4>Brushed DC Motor</h4>
+<img alt="dcmotor.gif" src="dcmotor.gif" />
+<ul class="simple">
+<li>First kind of electrically driven motor, runs off DC power</li>
+<li>&quot;brushes&quot; are just electrical contacts.  Thin strands are light and do not need large surface area for contact, but as they are mechanical, they will wear down and need replacing.</li>
+<li><dl class="first docutils">
+<dt>DC Motor rotation</dt>
+<dd><ul class="first last">
+<li>Motors use a at least one static magnet with N-S.  This is typically in the &quot;stator&quot; the stationary part of the motor.</li>
+<li>Applying an electric field to a coil also creates an opposite N-S pull...for 1/2 a turn until the magnets align N&lt;-&gt;S</li>
+<li>a &quot;Commutator&quot; will reverse the current through the coil, reversing it's magnetic field, causing the next turn</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>At the spot where N-S are aligned, there's a short which occurs, both in the brushes and across the coil.  waste of power.</li>
+<li>a solution is to use multiple magnets, where the motor has no &quot;dead zone&quot; otherwise called a pole.</li>
+</ul>
+<p>Benefits:</p>
+<ul class="simple">
+<li>Powerful</li>
+<li>Simple</li>
+</ul>
+<p>Cons:</p>
+<ul class="simple">
+<li>wasteful</li>
+<li>mechanical contacts wear out and require maintenance</li>
+<li>requires power to hold position.  No power, goes back to whatever position is dictated by gravity or other external force.</li>
+</ul>
+<p>Control:</p>
+<p>Voltages for brushed motors are typically high, as to be expected for something which needs to generate significant energy.</p>
+<p>Luckily, it's quite easy to control with a single transistor.  This is not the most efficient way, but it does work great for bench testing to where power isn't really an issue.  The transistor is just doing basic amplification of the input signal to a new power level.</p>
+<p>For an NPN transistor, the high voltage (power source) connects to the collector, and a PWM signal goes into base.  The emitter goes to ground.  This is an effective way to drive the motor by controlling the power with a PWM signal.  The motor can also be controlled using the valve analogy by varying the input at the base.</p>
+<p>Other controls like reverse will be covered below.</p>
+</div>
+<div class="section" id="dc-brushless-motor">
+<h4>DC Brushless Motor</h4>
+<img alt="brushless.gif" src="brushless.gif" />
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>DC powered but uses a switching power supply or an inverter.</dt>
+<dd><ul class="first last">
+<li>produces an AC current which drives each &quot;phase&quot; of the motor</li>
+<li>made possible by transistors
+- Rotor has magnets which change polarity with electric current (electro-magnets)</li>
+<li>Stator has stationary magnets</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Industrial automation</dt>
+<dd><ul class="first last">
+<li>high power, good speed-torque, high efficiency, low maintenance.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>closed loop control system for accurate control (like negative feedback)</li>
+<li>Servos are generally DC brushless, see below</li>
+<li>Very useful in transportation due to high torque.</li>
+</ul>
+<p>Benefits:</p>
+<ul class="simple">
+<li>powerful</li>
+<li>far less wasteful</li>
+<li>no brushes = less maintenance</li>
+</ul>
+<p>Cons:</p>
+<ul class="simple">
+<li>requires significant external circuitry to control</li>
+<li>Still requires holding power</li>
+</ul>
+<p>Control:</p>
+<p>It may seem like brushless and Brushed are similar enough to be driven the same way, but unfortunately that's not the case.  Brushless motors work far better with cleaner input signals like a pure sine wave, and require some relatively complex signalling compared to the simple brushed to stop and reverse direction.</p>
+<p>These requirements are handled by a ESC, Electronic Speed Controller.  These can be built by hand and that is a good exercise in both electronics and programming.  They can also be purchased off the shelf.  ESCs may or may not provide the functionality you require, however, like reversing the motor and good braking.  These are the same type of units found in rotocoptors or RC planes and cars.</p>
+<p>Note:</p>
+<p>Some ESC's require an arming sequence.  As they are designed for RC cars or rotocopters, they are meant to be &quot;armed&quot; via stick controls.  This needs to be emulated by the arduino for such ESCs.</p>
+<p>See here for code which controls an ESC:
+<a class="reference external" href="https://gist.github.com/vitorleal/9083802">https://gist.github.com/vitorleal/9083802</a></p>
+</div>
+<div class="section" id="stepper-motor">
+<h4>Stepper Motor</h4>
+<img alt="StepperMotor.gif" src="StepperMotor.gif" />
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Stepper motors are driven by power inputs, but use multiple inputs to drive the motor in steps.</dt>
+<dd><ul class="first last">
+<li>A step is set by the motor physics, or manufacturer, and denoted by an angle.</li>
+<li>A stepper with 256 steps would have 360 degrees / 256 steps = 1.4 degrees per step
+- This is a <strong>Full Step</strong>
+- it is possible to drive the motor by <strong>Half Steps</strong> which in this case is just 1.4/2 = 0.7 degrees.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>The inputs to a stepper motor are called phases</li>
+</ul>
+<p>Benefits:</p>
+<ul class="simple">
+<li>good holding power characteristics.</li>
+<li>Will sit at current position without needing to draw current. (detent or residual torque)</li>
+<li>Can hold a load in place while supplying current, limited by the max current available and torque sensitivity, which is found on the datasheet.</li>
+<li>position control is roughly handled by counting the steps required to make a full turn in a specific direction and doesn't require feedback control</li>
+</ul>
+<p>Cons:</p>
+<ul class="simple">
+<li>position may drift if constantly shifting between directions</li>
+<li>accurate only to the resolution provided by the number of steps.</li>
+<li>when driving loads, the motor can lose steps as the load gets heavier, and control is lost without feedback</li>
+<li>Driving steppers generally requires an H-bridge circuit, and 4 output pins.</li>
+</ul>
+<p>Control:</p>
+<p>The arduino Stepper library makes using steppers easy once the H-bridge is set up.  H-bridges can be built fairly easily and Stepper controllers can be purchased as well.  The h-bridge allows the driving signals to reverse the signals.  (Note you'll see darlington transistors mentioned.  That's the type of transistor used in the H-bridge.)</p>
+<p><a class="reference external" href="https://itp.nyu.edu/physcomp/labs/motors-and-transistors/lab-controlling-a-stepper-motor-with-an-h-bridge/">https://itp.nyu.edu/physcomp/labs/motors-and-transistors/lab-controlling-a-stepper-motor-with-an-h-bridge/</a></p>
+<p>Control is done by changing the current through electro magnets which pull the rotor to a new position.  Once in a new position, the current is changed to go through different wires, creating a new pull.</p>
+<p>No Arduino library example:</p>
+<p><a class="reference external" href="http://42bots.com/tutorials/bipolar-stepper-motor-control-with-arduino-and-an-h-bridge/">http://42bots.com/tutorials/bipolar-stepper-motor-control-with-arduino-and-an-h-bridge/</a></p>
+</div>
+<div class="section" id="servo-motor">
+<h4>Servo Motor</h4>
+<p>Servo motors are brushed or brushless DC motors, generally with a couple control features.</p>
+<ol class="arabic simple">
+<li>The only rotate through a fixed degree, like 360 or 180.  They are mechanically limited to these rotations</li>
+<li>They are externally powered and can be driven by linear or PWM signals</li>
+</ol>
+<p>Benefits:</p>
+<ul class="simple">
+<li>Will always turn to angle set by controller</li>
+<li>Good control of position, speed, and acceleration</li>
+</ul>
+<p>Cons:</p>
+<ul class="simple">
+<li>requires feedback to perform control, such as an encoder and a control circuit</li>
+<li>Only 180 degress total rotation, cannot keep spinning.</li>
+</ul>
+<p>Note:</p>
+<p>Continuous Servos have the limit from 1. removed.  Basically you can break the limiter in the motor, or just buy one.  But this basically ruins any internal feedback circuit, so the control now needs to be handled externally.</p>
+<p>The arduino servo motor library is very easu, but fundamentally they are driven by any PWM.  The longer the duty cycle, the farther the motor will rotate towards it's maximum.  This is because there is a controller inside the servo producing the right position for the input using feedback control on an internal circuit.  Servos are always externally powered since the PWM signal is not nearly enough to drive them.</p>
+</div>
+</div>
+</div>
+<div class="section" id="motor-resources">
+<h2>Motor Resources</h2>
+<p><a class="reference external" href="https://dovermotion.com/resources/motion-control-handbook/">https://dovermotion.com/resources/motion-control-handbook/</a></p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Brushed_DC_electric_motor">https://en.wikipedia.org/wiki/Brushed_DC_electric_motor</a></p>
+<p><a class="reference external" href="http://www.instructables.com/id/BLDC-Motor-Control-with-Arduino-salvaged-HD-motor/">http://www.instructables.com/id/BLDC-Motor-Control-with-Arduino-salvaged-HD-motor/</a></p>
+<p><a class="reference external" href="https://learn.adafruit.com/adafruit-motor-selection-guide/continuous-rotation-servos">https://learn.adafruit.com/adafruit-motor-selection-guide/continuous-rotation-servos</a></p>
+</div>
+<div class="section" id="interfaces">
+<h2>Interfaces</h2>
+<p>How do we know we can hook things together?  Just read the electrical characteristics of the datasheets.  Things like Maximum output voltage being less than or equal to maximum input voltage.  Same with current, the maximum input current should be less than the maximum output current.  Frequency doesn't matter here, exactly.  More specifically, as long as the DC maximums are respected, frequency wont matter.  Sometimes Max Peak voltages are higher than Maximum input voltages, as long as it's for some small number of seconds.  This is related to frequency.</p>
+<p>That's fairly simple.  but what if these ratings are different and you really want to use devices together?  Especially from a cost perspective?  Remember, this is analog, not digital.  No logic level shifters yet.</p>
+</div>
+<div class="section" id="attenuation">
+<h2>Attenuation</h2>
+<p>Attenuation is the opposite of amplification.  It's exactly making something smaller as much as it is shrinking the amplitude, which for a AC signal around 0, is shrinking the absolute value.  In the general case, a AC signal could be around a different DC voltage.  Attentuation would be shrinking the deviation from that DC voltage.</p>
+<div class="section" id="voltage-divider">
+<h3>Voltage Divider</h3>
+<img alt="volt-div.png" src="volt-div.png" />
+<p>The simplest way to lower voltage is to split it across two resistors.  One resistor dissipates unused power which is useless and the other drives the load.  This is find for both DC and AC signals, because a resistor is pure V/I and has not &quot;reactive&quot; component like a capacitor or inductor.  Pure resistor circuits can be more complex.</p>
+<p><a class="reference external" href="https://www.allaboutcircuits.com/textbook/semiconductors/chpt-1/attenuators/">https://www.allaboutcircuits.com/textbook/semiconductors/chpt-1/attenuators/</a></p>
+</div>
+<div class="section" id="current-limiter">
+<h3>Current Limiter</h3>
+<p>Current limiting is trickier than voltage because current behaves differently.  It usually requires transistors to turn on and off current sources based on the load current.</p>
+<p>putting resistors in parallel will not work, for example, as the load will draw whatever is required to pull it's voltage up regardless of what's in the control circuit.</p>
+</div>
+<div class="section" id="amplification">
+<h3>Amplification</h3>
+<p>Amplifying appears straight forward but there are important details to keep signals the right shape.  Beyond the methods mentioned above, amplifying the power of a circuit requires a network of transistors and  usually an op-amp.</p>
+<p>An op amp stands for Operational Amplifier.  Rarely is a single Op-amp used to amplify power, usually one is used to amplify either voltage or current, with voltage being more common.  However, amplifier is a bit of a misnomer.  They amplify, but with respect to a control system, or signal processing.  For example, if you want two voltages to remain the same, an op-amp will amplify the DIFFERENCE between the voltages to take a small different into a huge signal.  This is not the same as amplifying power.</p>
+<p>Op amps need a circuit of power supplies and resistors to form a real power amplify.  As we have discussed, other glue like capacitors and inductors are used to filter out noise.</p>
+<p>There are 4 kinds of opamps based on input signal and output amplification:
+Voltage signal, Voltage output
+Voltage signal, Current output
+Current Signal, Current output
+Current Signal, Voltage Output.</p>
+<p>Power amplification comes from a circuit.  A common circuit well worth understanding is the push-pull amplifier, very useful for audio, as they produce significantly less distortion during operation.</p>
+<p>Amplification can be a messy business, any error or noise in the input will also be magnified.</p>
+<img alt="amp24.gif" src="amp24.gif" />
+</div>
+</div>
+<div class="section" id="miscelaneous-control">
+<h2>Miscelaneous Control</h2>
+<div class="section" id="breaking">
+<h3>Breaking</h3>
+<p>Breaking a motor electrically is far less efficient than doing so mechanically.  A normally closed electromagnet that snaps closed as a break will use no power to hold the motor in place.</p>
+<p>Regenerative breaking is when the force used to break the motor feeds into a generator creating power.  Circuits for such can be found on the web, it's a common topic.</p>
+</div>
+<div class="section" id="rotary-encoders">
+<h3>Rotary Encoders</h3>
+<img alt="rotary.jpg" src="rotary.jpg" />
+<p>To track position, speed, and acceleration, DC motors use rotary encoders.  Some use light, some use electrical contacts.  The idea is to put sign posts that can be detected and feed that motion back to the controller.</p>
+<p>They are called encoders as they encode the position in binary.  It's useful to look this up, as the encoding is fairly clever, called Grey codes.</p>
+<img alt="rotary-grey-code.png" src="rotary-grey-code.png" />
+<img alt="rotary-flattened.jpg" src="rotary-flattened.jpg" />
+</div>
+<div class="section" id="h-bridge">
+<h3>H-Bridge</h3>
+<img alt="h-bridge.png" src="h-bridge.png" />
+<p>A H-bridge s used to reverse the direction of a motor by switching the signal paths from input to outputs.  Any kind of switching can be used, like relays or transistors.  the key is, as always, to match input-output characteristics.</p>
+<p>Construction an h-bridge is fairly simple from DPDT switches.  It's possible to find relays with exactly this configuration.</p>
+<img alt="motor-h-bridge.gif" src="motor-h-bridge.gif" />
+</div>
+<div class="section" id="motor-controller-boards">
+<h3>Motor Controller Boards</h3>
+<p>There's a bunch of off the shelf motor controllers available, like &quot;shields&quot; or specific controllers which run on i2c or something.  Definitely worth using after getting a handle on their operation.  May come with one of all of the controls above to play with.</p>
+</div>
+</div>
+</div>
+<div class="section" id="digital">
+<h1>Digital</h1>
+<p>We've spoken about the majoiity of digital outputs, being logic values, communication, and PWM.  PWM is interesting
+so we'll go overit again, as it is a way to transform a frequency output into a voltage value.</p>
+<div class="section" id="pwm">
+<h2>PWM</h2>
+<p>A type of digital to analog conversion using a frequency and a duty cycle.  The frequency is fast enough to the input of the device such that it is indistinguisable as a constant signal.  The signal is digital, form (let's say) 5V to 0v.  The duty cycle is how long the signal is a 5V compared to the full width of the cycle.  Varying the duty cycle from 0 to 100% determines the voltage seen at the device.</p>
+<p>The number of steps available inthe duty cycle is limited to the number of bits available to the clock creating the signal.  This again gives a resolution of the duty cycle , 5V/255 steps ~.02 volts per step.</p>
+<img alt="pwm.gif" src="pwm.gif" />
+</div>
+<div class="section" id="dac-adc">
+<h2>DAC/ADC</h2>
+<img alt="ADC.gif" src="ADC.gif" />
+<p>Digital to Analog conversion and Analog to Digital conversion are the opposites of each other.  The concept is simple, using some number of available bits, convert between the two representations of the same value.  so a 0v-5V range can be represented as an analog value, or as the digital number in that range, 255 for 5V and 0 for 0V.</p>
+<p>Once again, there is a resolution.  If resolution higher than the native available on the chip is required, then new hardware is required.</p>
+<p>It's possible to change the <em>range</em> of a DAC or ADC, but not the resolution, by stringing them together in series.</p>
+<p>DAC/ADC <strong>sample</strong> the input signals.  What this means is they take discrete values to try to reconstruct a continuous signal.  In the DC case, it's fairly straight forward, limited only by resolution.  In some bad situations, you can be right on the line of 127 and 128, and the sampled point jumps around.  This is handled in software via debouncing.</p>
+<img alt="sample.gif" src="sample.gif" />
+<p>In the AC case, The DAC is trying to create a continuous wave such as a sine wave.  The ADC is trying to store a samples of magnitude of the wave at various points in time.  Consider digital audio, it only contains bits.  Some bits store the amplitude, some store the frequency.</p>
+<p>To create a smooth wave from a digital signal, filtering is required on the output of the DAC.  This can be passive filters like combinations of inductors, capacitors, and resistors, or active filters using op amps.</p>
+<p>Clearly DACs are used to control analog devices.  The arduino code will use the &quot;analogWrite&quot; function to set the value in the DAC.  the output is a single pin, typucally named with a leading &quot;A.&quot;</p>
+<p>Likewise, to use the ADC, the arduino uses the same analog pins.  In this case, the analog signal is input into the pin, and read with &quot;analogRead&quot;.  The internal ADC will convert this to a 8 bit number from 0 to 255.</p>
+<p>Measuring signals larger or smaller than the logic levels allowed on the pin can be handled using voltage dividers where appropriate. Using external DACs and ADCs is best when outside those bounds because of resolution or other issues.  There would usually communicate via an interface like i2c.</p>
+<img alt="ADC-internal.gif" src="ADC-internal.gif" />
+<div class="section" id="sample-time">
+<h3>Sample Time</h3>
+<p>As we know, things take time in a microcontroller.  When the ADC takes a measurement, it takes a few clock cycles for the value to be calculated and stored before the next measurement.  Just like measuring the logic level of a signal required a hold time, so does the conversion.  This has an implication for the frequency of the analog signal that can be measured.  If it's varying too fast, no reliable measurement can be made, or most specifically, the measurement might be consistently wrong.</p>
+<p>In information theory there is a number called the Nyquist Frequency.  This is the rate of the sampling which can accurately measure an AC signal.  It's can be slower than the signal, but should conform to certain rules.  This is where sampling rates come from.  The human ear generally only hears up to 22Kh.  By sampling at 44Khz, the full analog waveform is guaranteed to be stored without loss.</p>
+<p>So there is some resolution of amplitude which is determined by the number of bits you have the converter, and the resolution of time you have to create of measure a signal.  What sample rate is to the ADC, smoothing is to the DAC.a</p>
+<img alt="DAC-error.gif" src="DAC-error.gif" />
+<p><a class="reference external" href="http://www.bb-elec.com/Learning-Center/All-White-Papers/Data-Aquisition-and-IO/The-Fine-Art-of-Analog-Signal-Sampling.aspx">http://www.bb-elec.com/Learning-Center/All-White-Papers/Data-Aquisition-and-IO/The-Fine-Art-of-Analog-Signal-Sampling.aspx</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="frequency">
+<h1>Frequency</h1>
+<p>An AC signal has two components that DC does not, which is frequency and phase.  Frequency we are pretty used to, it's the rate at which the wave is cycling.  Wavelength is the inverse of frequency, 1/f.</p>
+<p>Phase is easiest to understand when looking at the same signal, but shifted in time.</p>
+<img alt="Phase_shift.png" src="Phase_shift.png" />
+<p>The amount by which the signals are different in time is called the phase shift.  The phase relates time and frequency of two different signals.  These signals have the same frequency, but they are high and low at different times.  They are out of phase.</p>
+<p>The basic AC circuit is an RC oscillator.  Resistor, Inductor, Capacitor.</p>
+<img alt="RLC.gif" src="RLC.gif" />
+<p>Capacitors do not let current through, but as they accumulate charge, they will increase in voltage.  When the current is performing this task, it will flow through the inductor, which creates a magnetic field because of movement of charge.</p>
+<p>Because the capacitor creates voltage by storing charge, and the inductor creates current from moving charge, the circuit will oscillate.  The result is the voltage and current are out of phase.  When the voltage is highest, the current is at it's lowest.</p>
+<p>What is the frequency of oscillation?</p>
+<p>Well, without doing the math,</p>
+<img alt="LCfreq.png" src="LCfreq.png" />
+<p>Raw AC signals generally contain many frequencies, and typically we are only intersted in some of them.  Filters are used to remove frequencies we do not want.</p>
+<p>Filters work by lowering the amplitude of waves which pass through of vertain frequences.  The most common filters are high pass, low pass, and band pbass.</p>
+<p>Low pass filters let low frequencies and block high frequences.  High pass let high frequencies and remove low.  Band-pass remove frequences above and below a certain range, the band, and pass through frequencies in the band.  This is where the word &quot;bandwidth&quot; comes from, it's the width of the frequencies used.</p>
+<img alt="lhp.png" src="lhp.png" />
+<p> Note how the change isn't instantaneous, but a guideline is -3dB, 3 decibels, the frequency is sufficiently attenuated.</p> 
+<img alt="Bandwidth_2.png" src="Bandwidth_2.png" />
+<p>Once frequencies are isolated, they can be amplified as desired.  Never amplify before isolating the frequecies you want.  The last step is always amplification, and you want the signal as clean and noise free as possible, otherwise things you don't want will also be amplified.</p>
+</div>
+</div>
+
+<script type="text/javascript">
+var mtime = '1528334306.3570638';
+var poll = null;
+window.onload = function () {
+    setTimeout(function () {
+        poll = new XMLHttpRequest();
+        poll.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var reload = new XMLHttpRequest();
+                reload.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.title = this.responseXML.title;
+                        document.body.innerHTML = this.responseXML.body.innerHTML;
+                        var old_styles = document.getElementsByTagName('style');
+                        var new_styles = this.responseXML.getElementsByTagName('style');
+                        for (var i = old_styles.length - 1; i >= 0; i--) {
+                            old_styles[i].remove();
+                        }
+                        // convert HTMLCollection to an array so that
+                        // items don't disappear from under us when I append
+                        // them to a different DOM tree
+                        new_styles = [].slice.call(new_styles);
+                        for (var i = 0; i < new_styles.length; i++) {
+                            document.head.appendChild(new_styles[i]);
+                        }
+                        mtime = this.getResponseHeader('X-Restview-Mtime');
+                        if (mtime) {
+                            poll.open('HEAD', '/polling?pathname=' + location.pathname + '&mtime=' + mtime, true);
+                            poll.send();
+                        }
+                    }
+                }
+                reload.open('GET', location.pathname, true);
+                reload.responseType = 'document';
+                reload.send();
+            }
+        }
+        poll.open('HEAD', '/polling?pathname=' + location.pathname + '&mtime=' + mtime, true);
+        poll.send(null);
+    }, 0);
+}
+window.onbeforeunload = function () {
+    poll.abort();
+}
+</script>
+</body>
+</html>
+
