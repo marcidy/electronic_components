@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="634.90002"
+   height="169.75"
+   viewBox="0 -1437.2 634.90005 169.74999"
+   role="img"
+   focusable="false"
+   aria-labelledby="MathJax-SVG-1-Title"
+   version="1.1"
+   id="svg72"
+   sodipodi:docname="LCfreq.svg"
+   inkscape:export-filename="/home/marcidy/projects/noisebridge/electronic_components/class-9/LCfreq.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata76">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>{\displaystyle f_{0}={\frac {\omega _{0}}{2\pi }}={\frac {1}{2\pi {\sqrt {LC}}}}\,.}</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="722"
+     id="namedview74"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.46857773"
+     inkscape:cx="317.45"
+     inkscape:cy="84.875"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg72" />
+  <title
+     id="MathJax-SVG-1-Title">{\displaystyle f_{0}={\frac {\omega _{0}}{2\pi }}={\frac {1}{2\pi {\sqrt {LC}}}}\,.}</title>
+  <defs
+     aria-hidden="true"
+     id="defs14">
+    <path
+       id="E1-MJMATHI-66"
+       d="m 118,-162 q 2,0 6,-2 4,-2 11,-3 7,-1 12,-1 13,0 24,13 11,13 16,29 10,27 34,153 24,126 46,240 22,114 22,115 v 3 h -47 q -47,0 -50,2 -4,3 -4,10 l 7,28 q 2,5 8,5 6,0 47,1 48,0 48,1 0,2 9,50 9,48 12,58 37,165 146,165 37,-2 61,-22 24,-20 24,-53 0,-36 -21,-52 -21,-16 -42,-17 -44,0 -44,42 0,19 11,33 11,14 24,21 l 9,5 q -16,6 -30,6 -12,0 -23,-10 -11,-10 -15,-28 -7,-29 -16,-78 -9,-49 -16,-83 -7,-34 -7,-36 0,-2 55,-2 45,0 52,-1 7,-1 11,-6 1,-4 -2,-17 -3,-13 -5,-16 -2,-5 -9,-5 -7,0 -54,-1 H 372 L 349,263 Q 301,15 282,-47 q -27,-85 -70,-126 -37,-32 -73,-32 -32,0 -58,19 -26,19 -26,54 0,37 21,54 21,17 42,17 44,0 44,-42 0,-19 -11,-33 -11,-14 -24,-21 z"
+       inkscape:connector-curvature="0"
+       style="stroke-width:1" />
+    <path
+       id="E1-MJMAIN-30"
+       d="m 96,585 q 56,81 153,81 48,0 96,-26 48,-26 78,-92 37,-83 37,-228 0,-155 -43,-237 -20,-42 -55,-67 -35,-25 -61,-31 -26,-6 -51,-7 -26,0 -52,6 -26,6 -61,32 -35,26 -55,67 -43,82 -43,237 0,174 57,265 z m 225,12 q -30,32 -71,32 -42,0 -72,-32 -25,-26 -33,-72 -8,-46 -8,-192 0,-158 8,-208 8,-50 36,-79 28,-30 69,-30 40,0 68,30 29,30 36,84 7,54 8,203 0,145 -8,191 -8,46 -33,73 z"
+       inkscape:connector-curvature="0"
+       style="stroke-width:1" />
+    <path
+       id="E1-MJMAIN-3D"
+       d="m 56,347 q 0,13 14,20 h 637 q 15,-8 15,-20 0,-11 -14,-19 L 390,327 H 72 q -16,5 -16,20 z m 0,-194 q 0,15 16,20 h 636 q 14,-10 14,-20 0,-13 -15,-20 H 70 q -14,7 -14,20 z"
+       inkscape:connector-curvature="0"
+       style="stroke-width:1" />
+    <path
+       id="E1-MJMATHI-3C9"
+       d="m 495,384 q 0,22 19,40 19,18 41,19 19,0 34,-18 15,-18 15,-61 0,-30 -12,-86 Q 580,222 555,155 530,88 483,38 436,-12 377,-11 q -80,0 -110,77 -1,2 -7,-5 -59,-72 -135,-72 -110,0 -110,150 0,91 41,186 41,95 67,109 12,7 24,2 13,-7 13,-18 0,-12 -20,-39 -20,-27 -46,-73 -26,-46 -32,-98 -1,-6 -1,-21 0,-63 24,-87 24,-24 58,-24 58,0 102,53 l 8,8 v 19 q 5,141 64,141 31,0 31,-36 0,-18 -10,-48 -10,-30 -20,-55 l -10,-23 q 1,-2 2,-6 1,-4 8,-14 7,-10 16,-18 9,-8 24,-14 15,-6 35,-7 63,0 108,72 45,72 45,126 0,31 -13,51 -13,20 -25,32 -12,12 -13,27 z"
+       inkscape:connector-curvature="0"
+       style="stroke-width:1" />
+    <path
+       id="E1-MJMAIN-32"
+       d="m 109,429 q -27,0 -43,18 -16,18 -16,44 0,71 53,123 53,52 132,52 91,0 152,-56 61,-56 62,-145 0,-43 -20,-82 -20,-39 -48,-68 -28,-29 -80,-74 -36,-31 -100,-92 l -59,-56 76,-1 q 157,0 167,5 7,2 24,89 v 3 h 40 v -3 Q 448,183 436,95 424,7 421,3 V 0 H 50 v 19 12 q 0,7 6,15 6,8 30,35 29,32 50,56 9,10 34,37 25,27 34,37 9,10 29,33 20,23 28,34 8,11 23,30 15,19 21,32 6,13 15,29 9,16 13,32 4,16 7,30 3,14 3,33 0,63 -34,109 -34,46 -97,46 -33,0 -58,-17 -25,-17 -35,-33 -10,-16 -10,-19 0,-1 5,-1 18,0 37,-14 19,-14 19,-46 0,-25 -16,-42 -16,-17 -45,-18 z"
+       inkscape:connector-curvature="0"
+       style="stroke-width:1" />
+    <path
+       id="E1-MJMATHI-3C0"
+       d="m 132,-11 q -34,0 -34,33 v 11 l 13,28 q 75,158 109,273 l 8,24 h -32 q -38,0 -54,-3 -16,-3 -39,-19 -11,-7 -22,-18 -11,-11 -19,-21 -8,-10 -9,-12 -2,-1 -15,-1 -19,0 -19,10 0,6 19,35 19,29 55,62 36,33 71,38 7,2 225,2 160,0 164,-1 20,-7 20,-28 0,-31 -32,-42 -6,-2 -69,-2 h -64 l -3,-17 q -12,-72 -12,-119 0,-52 9,-93 9,-41 19,-64 10,-23 10,-28 0,-17 -14,-32 -14,-15 -36,-15 -11,0 -18,3 -7,3 -16,24 -9,21 -16,60 -1,9 -1,44 0,49 9,105 9,56 18,92 9,36 10,40 h -98 l -1,-4 q 0,-3 -19,-79 Q 230,199 206,114 182,29 175,17 164,-11 132,-11 Z"
+       inkscape:connector-curvature="0"
+       style="stroke-width:1" />
+    <path
+       id="E1-MJMAIN-31"
+       d="m 213,578 -13,-5 q -14,-5 -40,-10 -26,-5 -58,-7 H 83 v 46 h 19 q 47,2 87,15 40,13 56,24 16,11 28,22 2,3 12,3 9,0 17,-6 V 361 l 1,-300 q 7,-7 12,-9 5,-2 24,-4 19,-2 62,-2 h 26 V 0 H 416 Q 395,3 257,3 121,3 100,0 H 88 v 46 h 26 q 22,0 38,0 16,0 25,1 9,1 16,3 7,2 8,2 1,0 6,5 5,5 6,4 z"
+       inkscape:connector-curvature="0"
+       style="stroke-width:1" />
+    <path
+       id="E1-MJMATHI-4C"
+       d="m 228,637 q -34,0 -36,4 -1,2 -1,8 0,24 11,33 2,1 15,1 54,-3 127,-3 141,0 162,3 h 12 q 6,-6 6,-9 0,-3 -2,-18 -5,-15 -9,-19 h -38 q -69,-1 -81,-9 -7,-4 -14,-28 Q 373,576 313,336 297,271 279,198 261,125 252,88 l -9,-36 q 0,-4 9,-4 9,0 59,-2 h 17 q 32,0 51,1 19,1 49,7 30,6 50,18 20,12 44,34 24,22 42,55 16,30 30,67 14,37 17,42 5,3 17,3 h 13 q 6,-9 6,-11 0,-2 -20,-59 Q 607,146 583,83 559,20 557,9 555,4 553,3 551,2 537,0 523,-2 494,-1 483,-1 418,-1 353,-1 294,0 H 116 q -84,0 -84,10 0,7 2,14 5,19 10,21 4,1 15,1 h 6 q 27,0 60,3 14,3 19,12 3,4 72,278 69,274 69,289 0,7 -57,9 z"
+       inkscape:connector-curvature="0"
+       style="stroke-width:1" />
+    <path
+       id="E1-MJMATHI-43"
+       d="m 50,252 q 0,115 67,221 67,106 169,168 102,62 204,63 90,0 143,-51 9,-10 15,-17 6,-7 8,-10 l 1,-3 q 3,0 27,26 7,6 15,14 8,8 16,16 8,8 10,11 l 15,15 h 6 q 14,0 14,-7 0,-4 -32,-137 -36,-139 -36,-140 -2,-5 -5,-6 -3,-1 -18,-2 h -16 q -6,6 -6,9 0,1 1,7 1,6 2,20 1,14 1,32 0,71 -32,124 -32,53 -109,54 -26,0 -56,-7 -30,-7 -72,-24 -42,-17 -83,-56 -41,-39 -73,-93 -32,-57 -51,-133 -19,-76 -19,-124 0,-114 76,-164 48,-34 118,-34 91,0 162,68 71,68 94,148 4,13 6,15 2,2 16,2 20,0 20,-9 0,-5 -1,-9 Q 618,132 523,55 428,-22 319,-22 206,-22 128,53 50,128 50,252 Z"
+       inkscape:connector-curvature="0"
+       style="stroke-width:1" />
+    <path
+       id="E1-MJMAIN-221A"
+       d="m 95,178 q -6,0 -14,8 -8,8 -9,14 -1,6 31,30 32,24 66,50 34,26 38,29 2,2 5,2 h 1 q 6,0 14,-17 8,-17 54,-117 19,-43 31,-69 l 85,-185 q 1,0 104,213 103,213 206,429 103,216 107,221 6,14 20,14 7,0 12,-6 5,-6 7,-12 v -6 L 620,293 385,-193 q -4,-7 -19,-7 -9,0 -12,3 -2,2 -98,212 L 160,225 144,214 Q 129,202 113,190 97,178 95,178 Z"
+       inkscape:connector-curvature="0"
+       style="stroke-width:1" />
+    <path
+       id="E1-MJMAIN-2E"
+       d="m 78,60 q 0,24 17,42 17,18 43,18 24,0 42,-16 Q 198,88 199,61 199,36 182,18 165,0 139,0 113,0 96,17 79,34 78,60 Z"
+       inkscape:connector-curvature="0"
+       style="stroke-width:1" />
+  </defs>
+  <g
+     transform="matrix(0.07,0,0,-0.07,-3.815,-1343.225)"
+     aria-hidden="true"
+     id="g70"
+     style="fill:currentColor;stroke:currentColor;stroke-width:0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96">
+    <use
+       xlink:href="#E1-MJMATHI-66"
+       x="0"
+       y="0"
+       id="use16"
+       width="100%"
+       height="100%" />
+    <use
+       transform="scale(0.707)"
+       xlink:href="#E1-MJMAIN-30"
+       x="693"
+       y="-213"
+       id="use18"
+       width="100%"
+       height="100%" />
+    <use
+       xlink:href="#E1-MJMAIN-3D"
+       x="1222"
+       y="0"
+       id="use20"
+       width="100%"
+       height="100%" />
+    <g
+       transform="translate(2278)"
+       id="g38">
+      <g
+         transform="translate(120)"
+         id="g36">
+        <rect
+           width="1196"
+           height="60"
+           x="0"
+           y="220"
+           id="rect22"
+           style="stroke:none" />
+        <g
+           transform="translate(60,685)"
+           id="g28">
+          <use
+             xlink:href="#E1-MJMATHI-3C9"
+             x="0"
+             y="0"
+             id="use24"
+             width="100%"
+             height="100%" />
+          <use
+             transform="scale(0.707)"
+             xlink:href="#E1-MJMAIN-30"
+             x="880"
+             y="-213"
+             id="use26"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           transform="translate(61,-687)"
+           id="g34">
+          <use
+             xlink:href="#E1-MJMAIN-32"
+             x="0"
+             y="0"
+             id="use30"
+             width="100%"
+             height="100%" />
+          <use
+             xlink:href="#E1-MJMATHI-3C0"
+             x="500"
+             y="0"
+             id="use32"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+    </g>
+    <use
+       xlink:href="#E1-MJMAIN-3D"
+       x="3992"
+       y="0"
+       id="use40"
+       width="100%"
+       height="100%" />
+    <g
+       transform="translate(5048)"
+       id="g66">
+      <g
+         transform="translate(120)"
+         id="g64">
+        <rect
+           width="3469"
+           height="60"
+           x="0"
+           y="220"
+           id="rect42"
+           style="stroke:none" />
+        <use
+           xlink:href="#E1-MJMAIN-31"
+           x="1484"
+           y="676"
+           id="use44"
+           width="100%"
+           height="100%" />
+        <g
+           transform="translate(60,-929)"
+           id="g62">
+          <use
+             xlink:href="#E1-MJMAIN-32"
+             x="0"
+             y="0"
+             id="use46"
+             width="100%"
+             height="100%" />
+          <use
+             xlink:href="#E1-MJMATHI-3C0"
+             x="500"
+             y="0"
+             id="use48"
+             width="100%"
+             height="100%" />
+          <g
+             transform="translate(1074)"
+             id="g60">
+            <use
+               xlink:href="#E1-MJMAIN-221A"
+               x="0"
+               y="47"
+               id="use50"
+               width="100%"
+               height="100%" />
+            <rect
+               width="1442"
+               height="60"
+               x="833"
+               y="788"
+               id="rect52"
+               style="stroke:none" />
+            <g
+               transform="translate(833)"
+               id="g58">
+              <use
+                 xlink:href="#E1-MJMATHI-4C"
+                 x="0"
+                 y="0"
+                 id="use54"
+                 width="100%"
+                 height="100%" />
+              <use
+                 xlink:href="#E1-MJMATHI-43"
+                 x="681"
+                 y="0"
+                 id="use56"
+                 width="100%"
+                 height="100%" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <use
+       xlink:href="#E1-MJMAIN-2E"
+       x="8925"
+       y="0"
+       id="use68"
+       width="100%"
+       height="100%" />
+  </g>
+</svg>
