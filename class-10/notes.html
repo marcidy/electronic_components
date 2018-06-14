@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <style>
+div#code {
+  white-space: pre-wrap;
+    color: #42F4BC;
+}
+body {
+  background: #202020;
+    color: #FFFF00;
+      font-size: 36;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Time</h1>
+    <p>
+    You only have a limited about of time.  How can you not waste it?"
+    </p>
+    <p>
+    Time is limited when dealing with something else with a timer.  In this case, lets use a human.  A human has a visual refresh rate of about 24Hz, which means anytthing happening slower than 24Hz will be noticed, and anything happening faster won't be.  For example, animation looks smooth above 24Hz, typically referred to as frames per second.  
+    <p>
+    <p>
+    So, in this case, what's a frame?  This is anything you need to do before the human notices that something has changed.  Simple example: an LED is pulsing, how you can detect a button click?
+    </p>
+    <div id="code">
+      loop() {
+        for (x =0, x&lt;=255, x++) {
+         analogWrite(pin, x);
+         delay(100);
+         }
+
+         y = digitalRead(button); 
+         if (y == HIGH) {
+            doSomething();  // this takes 50ms
+          }
+         }
+    </div>
+    <div id="me">
+      How long will this take to run?
+      <ul>
+        <li> Will the button presses always be detected?
+        <li> What's going to happen to the LED pulses?
+      </ul>
+      The problem is that the for look will have to complete before checking the button.  And checking the button is so fast, we're guaranteed to miss it unless it's held down.  wat do?
+    </div>
+    <div id="me">
+      The key is to manage your time effectively.  delay statements literally do nothing, nothing else can run while they are running.  If we can still pulse the led with 100ms intervals, but we don't have to block the rest of the execution, we acquire 25500 ms to do other stuff....or do we?
+    </div>
+    <div id="me">
+      We still need to update the led every 100ms though.  But 100ms still frees up time to check the button.  We'll use waits and delays.
+      <div id="code">
+        int wait = 0;
+        int delay = 100;
+
+        loop() {
+          if (millis - wait &gt; delay) {
+            x +=1
+            analogWrite(pin, x);
+            wait = millis();
+            }
+
+            y = digitalRead(button);
+
+            if (y == HIGH) {
+                doSomething();
+            }
+          }
+      </div>
+      Not only is this non-blocking, but a foor loop was eliminated.  remember, loop is already a loop!  use it to your advantage.
+      Are we in the clear?
+    </div>
+    <div id="me">
+      <h1>No!</h1>
+      We still have the issue with the doSomething function.
+    </div>
+  </body>
+</html>
+
+
